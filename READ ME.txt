@@ -1,0 +1,7 @@
+Notes from Erty:
+
+Instead of hard coding HTML we're using something called mark down.
+Here are some useful links on the language:
+https://www.markdownguide.org/cheat-sheet/
+https://www.markdownguide.org/basic-syntax
+https://dillinger.io/
