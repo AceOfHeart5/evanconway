@@ -9,20 +9,32 @@
 	padding: 0;
 }
 
+/* base stylings*/
+.navbar {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+}
+.nav:hover {
+	cursor: pointer;
+}
+.my-name:hover {
+	cursor: default;
+}
+.nav.selected {
+	border-bottom: 2px solid white;
+}
+
 /* assume phone style */
 .topbar {
 	display: grid;
 	grid-template-columns: 100%;
+	margin-bottom: 10px;
 }
 .topbar h1, .navbar{
 	border-bottom: 2px solid white;
 	padding: 10px;
-}
-.navbar {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	align-items: center;
-	justify-items: center;
 }
 @media screen and (min-width: 700px) {
 	.topbar {
