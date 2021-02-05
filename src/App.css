@@ -3,12 +3,17 @@
 	background: #222222;
 	min-height: 100vh;
 }
-/* comment from Erty regarding scroll bar:
-Re: scroll bar, it's position:fixed or position:static
+/* 
+This forces scroll bar to always exist. 
+Helps prevent change in site width when clicking "Blog". 
 */
+html {
+	overflow-y: scroll;
+}
 
 /* base stylings*/
 .navbar {
+	background-color: red;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
@@ -67,7 +72,6 @@ Re: scroll bar, it's position:fixed or position:static
 @media screen and (min-width: 700px) {
 	.topbar {
 		grid-template-columns: 50% 50%;
-
 		border-bottom: 2px solid white;
 	}
 	.topbar h1, .navbar {
