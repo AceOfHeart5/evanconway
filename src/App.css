@@ -1,13 +1,11 @@
 .App {
 	color: white;
 	background: #222222;
-	height: 100vh;
+	min-height: 100vh;
 }
-.App *{
-	/* This might be bad practice? */
-	margin: 0;
-	padding: 0;
-}
+/* comment from Erty regarding scroll bar:
+Re: scroll bar, it's position:fixed or position:static
+*/
 
 /* base stylings*/
 .navbar {
@@ -19,11 +17,41 @@
 .nav:hover {
 	cursor: pointer;
 }
+.nav {
+	padding: 2px;
+	margin: 5px;
+}
 .my-name:hover {
 	cursor: default;
 }
 .nav.selected {
+	margin-bottom: 3px;
 	border-bottom: 2px solid white;
+}
+.bloglist{
+	margin: 30px;
+	border: 2px solid grey;
+	padding: 30px;
+	padding-bottom: 0px;
+	list-style: none;
+}
+.bloglisting {
+	box-sizing: border-box;
+	padding: 5px;
+	margin-bottom: 30px;
+}
+.bloglisting:hover {
+	border-bottom: 2px solid white;
+	margin-bottom: 28px;
+	cursor: pointer;
+}
+.blogback:hover {
+	cursor: pointer;
+}
+.blogpost {
+	margin: 30px;
+	border: 2px solid grey;
+	padding: 30px;
 }
 
 /* assume phone style */
