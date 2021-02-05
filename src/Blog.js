@@ -5,13 +5,14 @@ const Blog = () => {
     const [viewing, setViewing] = useState("list");
 
     // get blog data
+    // this useEffect replaces COmponentDidMount in class components
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
             .then(json => setBlogs(json));
     }, []);
 
-    // change component when blogs is populated
+    // update component when blogs is populated
     // this useEffect replaces componentDidUpdate in class components
     useEffect(() => {
         console.log(blogs);
@@ -36,9 +37,11 @@ const Blog = () => {
 
     if (viewing === "list") {
         return (
-            <ul className="bloglist">
-                {blogs.map((e, i) => getBlogListing(e, i))}
-            </ul>
+            <div className="blogwrapper">
+                <ul className="bloglist">
+                    {blogs.map((e, i) => getBlogListing(e, i))}
+                </ul>
+            </div>
         );
     }
 

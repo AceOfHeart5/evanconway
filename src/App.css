@@ -32,10 +32,18 @@ html {
 	margin-bottom: 3px;
 	border-bottom: 2px solid white;
 }
-.bloglist{
-	margin: 30px;
+.contentwrapper {
+	margin: 0px;
+	padding: 20px;
+}
+.contentborder {
+	margin: 0px;
+	padding: 0px 20px;
 	border: 2px solid grey;
-	padding: 30px;
+}
+.bloglist{
+	padding: 0px;
+	margin: 0px;
 	padding-bottom: 0px;
 	list-style: none;
 }
@@ -53,11 +61,21 @@ html {
 	cursor: pointer;
 }
 .blogpost {
-	margin: 30px;
-	border: 2px solid grey;
-	padding: 30px;
+	margin: 0px;
+	padding: 0px;
 }
-
+.blogpost * {
+	/* The automatic margin settings were making life harder, so we're resetting margins for blogposts. */
+	margin: 0px;
+}
+.blogback {
+	margin-bottom: 10px;
+	padding: 5px 0px;
+}
+.blogback:hover {
+	border-bottom: 2px solid white;
+	margin-bottom: 8px;
+}
 /* assume phone style */
 .topbar {
 	display: grid;
