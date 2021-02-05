@@ -15,9 +15,12 @@ const getContent = (name) => {
 		<h1>I'll list my projects later.</h1>
 	);
 	if (name === "blog") return (<Blog/>);
+	if (name.startsWith("changing")) return (
+		<div></div>
+	);
 	return (
 		<h1>There is no content with name "{name}" :(</h1>
-	);
+	)
 }
 
 function App() {
@@ -25,15 +28,21 @@ function App() {
 	// content setter
 	const [content, setContent] = useState("none");
 
+	// set content wrapper
+	const setContentWrapper = (name) => {
+		setContent(`changing ${name}`);
+	}
+
 	useEffect(() => {
-		console.log(content);
+		const newContent = content.split(" ");
+		if (newContent[0] === "changing") setContent(newContent[1]);
 	}, [content]);
 
 	return (
 		<div className="App">
 			<div className="topbar">
 				<h1 className="my-name">Evan Conway</h1>
-				<Navbar contentChoice={content} contentSetter={setContent}/>
+				<Navbar contentChoice={content} contentSetter={setContentWrapper}/>
 			</div>
 			<div className="contentwrapper">
 				<div className="contentborder">
