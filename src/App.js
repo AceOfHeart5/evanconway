@@ -45,7 +45,7 @@ function App() {
 				<Navbar contentChoice={content} contentSetter={setContentWrapper}/>
 			</div>
 			<div className="contentwrapper">
-				<div className="contentborder">
+				<div className="contentborder" contentType={content}>
 					{getContent(content)}
 				</div>
 			</div>

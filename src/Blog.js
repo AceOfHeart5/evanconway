@@ -31,7 +31,8 @@ const Blog = () => {
 
     if (!blogs) {
         return (
-            <h1>Fetching blog data...</h1>
+            // just an empty div
+            <div></div>
         );
     } 
 
