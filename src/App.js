@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Navbar.js';
 import Blog from './Blog.js';
 import React, { useState, useEffect } from 'react';
+import firebase from 'firebase';
 
 /*
 It's probably foolish to make our own routing system. 
@@ -25,6 +26,18 @@ const getContent = (name) => {
 
 function App() {
 
+	/* 
+	We followed the information at this link to add firebase to this app:
+	https://dev.to/farazamiruddin/react-firebase-add-firebase-to-a-react-app-4nc9
+	We add firebase to the project simply by installing it in the cl. We setup 
+	config values in the index.js file.
+	*/
+
+	// this is componentDidMount()
+	useEffect(() => {
+		console.log(JSON.stringify(firebase.apps[0].options, null, 2));
+	}, []);
+
 	// content setter
 	const [content, setContent] = useState("none");
 
@@ -45,7 +58,7 @@ function App() {
 				<Navbar contentChoice={content} contentSetter={setContentWrapper}/>
 			</div>
 			<div className="contentwrapper">
-				<div className="contentborder" contentType={content}>
+				<div className="contentborder" content-type={content}>
 					{getContent(content)}
 				</div>
 			</div>

@@ -5,7 +5,7 @@ const Blog = () => {
     const [viewing, setViewing] = useState("list");
 
     // get blog data
-    // this useEffect replaces COmponentDidMount in class components
+    // this useEffect replaces ComponentDidMount in class components
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())

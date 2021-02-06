@@ -41,7 +41,7 @@ html {
 	padding: 0px 20px;
 	border: 2px solid grey;
 }
-.contentborder[contentType^="changing"] {
+.contentborder[content-type^="changing"] {
 	border: none;
 }
 .bloglist{
