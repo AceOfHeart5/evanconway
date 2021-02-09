@@ -49,6 +49,10 @@ html {
 	padding-bottom: 0px;
 	list-style: none;
 }
+.bloglink {
+	color: white;
+	text-decoration: none;
+}
 .bloglisting {
 	box-sizing: border-box;
 	padding: 5px;
@@ -57,9 +61,6 @@ html {
 .bloglisting:hover {
 	border-bottom: 2px solid white;
 	margin-bottom: 28px;
-	cursor: pointer;
-}
-.blogback:hover {
 	cursor: pointer;
 }
 .blogpost {
@@ -73,8 +74,11 @@ html {
 .blogback {
 	margin-bottom: 10px;
 	padding: 5px 0px;
+	color: white;
+	text-decoration: none;
 }
 .blogback:hover {
+	cursor: pointer;
 	border-bottom: 2px solid white;
 	margin-bottom: 8px;
 }

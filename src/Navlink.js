@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
-const Navlink = ({link, children, choose}) => {
+const Navlink = ({ link, children, selected }) => {
 
     const getSelected = () => {
-        if (window.location.pathname.endsWith(link)) return "selected";
+        if (link === selected) return "selected";
         return null;
     }
 
     return ( 
-        <Link className={`nav ${getSelected()}`} to={link} onClick={() => choose(link)}>
+        <Link className={`nav ${getSelected()}`} to={"/" + link}>
             {children}
         </Link>
     );

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState(null);
-    const [viewing, setViewing] = useState("list");
+    const [viewing, setViewing] = useState("blog");
 
     // get blog data
     // this useEffect replaces ComponentDidMount in class components
@@ -15,18 +15,30 @@ const Blog = () => {
 
     // update component when blogs is populated
     // this useEffect replaces componentDidUpdate in class components
-    useEffect(() => {}, [blogs]);
+    useEffect(() => {}, [blogs, viewing]);
+
+    const history = useHistory();
+
+    useEffect(() => {
+        return history.listen(location => {
+            /* Behold! Janky code to determine if the url ends with blog/number. I'm positive
+            there's a cleaner way to do this with regex, but I can't be bothered right now. */
+            const urlParts = location.pathname.split("/");
+            const lastPart = urlParts[urlParts.length - 1];
+            setViewing(lastPart);
+        })
+    }, [history]);
 
     const getBlogListing = (blog, key) => {
         // We will replace this description code with something else later
         let description = blog.body.slice(0, 100) + "...";
         return (
-            <li key={key} className="bloglisting">
-                <Link to={`blog/${String(key)}`}>
+            <Link className="bloglink" key={key} to={`/blog/${String(key)}`}>
+                <li className="bloglisting">
                     <h3>{blog.title}</h3>
                     <div>{description}</div>
-                </Link>
-            </li>
+                </li>
+            </Link >
         )
     }
 
@@ -38,7 +50,10 @@ const Blog = () => {
         );
     } 
 
-    if (window.location.pathname.endsWith("blog")) {
+    const urlParts = window.location.pathname.split("/");
+    const lastPart = urlParts[urlParts.length - 1];
+
+    if (lastPart === "blog") {
         return (
             <div className="blogwrapper">
                 <ul className="bloglist">
@@ -48,16 +63,22 @@ const Blog = () => {
         );
     }
 
-    /* If we reach this point, viewing is a blog object. */
-    if (viewing) {
+    /* Return blog post if we're looking at /blog/integer */
+    if (Number.isInteger(parseInt(lastPart))) {
+        const blog = blogs[parseInt(lastPart)];
         return (
             <div className="blogpost">
-                <h4 className="blogback" onClick={() => setViewing("list")}>Back To List</h4>
-                <h1>{viewing.title}</h1>
-                <main>{viewing.body}</main>
+                <Link className="blogback" to="/blog">Back To List</Link>
+                <h1>{blog.title}</h1>
+                <main>{blog.body}</main>
             </div>
         );
     }
+
+    // default return
+    return (
+        <h1>Oh no! Something is broken :(</h1>
+    )
 }
- 
+
 export default Blog;

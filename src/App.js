@@ -21,8 +21,6 @@ function App() {
 		//console.log(JSON.stringify(firebase.apps[0].options, null, 2));
 	}, []);
 
-	console.log(window.location.pathname);
-
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -35,7 +33,7 @@ function App() {
 						<Switch>
 							<Route path="/projects">Literally nothing here yet.</Route>
 							<Route path="/about">The about page.</Route>
-							<Route path="/"><Blog /></Route>
+							<Route path="/blog"><Blog/></Route>
 						</Switch>
 					</div>
 				</div>
