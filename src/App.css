@@ -12,6 +12,9 @@ html {
 }
 
 /* base stylings*/
+.my-name:hover {
+	cursor: default;
+}
 .navbar {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -24,9 +27,8 @@ html {
 .nav {
 	padding: 2px;
 	margin: 5px;
-}
-.my-name:hover {
-	cursor: default;
+	text-decoration: none;
+	color: white;
 }
 .nav.selected {
 	margin-bottom: 3px;
@@ -40,9 +42,6 @@ html {
 	margin: 0px;
 	padding: 0px 20px;
 	border: 2px solid grey;
-}
-.contentborder[content-type^="changing"] {
-	border: none;
 }
 .bloglist{
 	padding: 0px;

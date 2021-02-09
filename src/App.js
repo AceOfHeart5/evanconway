@@ -3,26 +3,7 @@ import Navbar from './Navbar.js';
 import Blog from './Blog.js';
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
-
-/*
-It's probably foolish to make our own routing system. 
-But who cares, I'm having fun.
-*/
-const getContent = (name) => {
-	if (name === "about") return (
-		<div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quos, quaerat, asperiores voluptate praesentium explicabo velit expedita dolorum dolore quisquam libero veritatis repellat? Nemo officiis natus laboriosam, ut magnam iste.</div>
-	);
-	if (name === "projects") return (
-		<h1>I'll list my projects later.</h1>
-	);
-	if (name === "blog") return (<Blog/>);
-	if (name.startsWith("changing")) return (
-		<div></div>
-	);
-	return (
-		<h1>There is no content with name "{name}" :(</h1>
-	)
-}
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
 
@@ -35,33 +16,30 @@ function App() {
 
 	// this is componentDidMount()
 	useEffect(() => {
-		console.log(JSON.stringify(firebase.apps[0].options, null, 2));
+		//firebase.storage().ref("Shocked Pikachu.jpg").getDownloadURL()
+		//	.then(e => setPika(e));
+		//console.log(JSON.stringify(firebase.apps[0].options, null, 2));
 	}, []);
 
-	// content setter
-	const [content, setContent] = useState("none");
-
-	// set content wrapper
-	const setContentWrapper = (name) => {
-		setContent(`changing ${name}`);
-	}
-
-	useEffect(() => {
-		const newContent = content.split(" ");
-		if (newContent[0] === "changing") setContent(newContent[1]);
-	}, [content]);
+	console.log(window.location.pathname);
 
 	return (
 		<div className="App">
-			<div className="topbar">
-				<h1 className="my-name">Evan Conway</h1>
-				<Navbar contentChoice={content} contentSetter={setContentWrapper}/>
-			</div>
-			<div className="contentwrapper">
-				<div className="contentborder" content-type={content}>
-					{getContent(content)}
+			<BrowserRouter>
+				<div className="topbar">
+					<h1 className="my-name">Evan Conway</h1>
+					<Navbar/>
 				</div>
-			</div>
+				<div className="contentwrapper">
+					<div className="contentborder">
+						<Switch>
+							<Route path="/projects">Literally nothing here yet.</Route>
+							<Route path="/about">The about page.</Route>
+							<Route path="/"><Blog /></Route>
+						</Switch>
+					</div>
+				</div>
+			</BrowserRouter>
 		</div>
 	);
 }
