@@ -12,9 +12,6 @@ html {
 }
 
 /* base stylings*/
-.my-name:hover {
-	cursor: default;
-}
 .navbar {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -88,9 +85,13 @@ html {
 	grid-template-columns: 100%;
 	margin-bottom: 10px;
 }
-.topbar h1, .navbar{
+.topbar h1, .navbar {
 	border-bottom: 2px solid white;
 	padding: 10px;
+}
+.my-name {
+	color: white;
+	text-decoration: none;
 }
 @media screen and (min-width: 700px) {
 	.topbar {

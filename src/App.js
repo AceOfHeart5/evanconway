@@ -3,7 +3,7 @@ import Navbar from './Navbar.js';
 import Blog from './Blog.js';
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 function App() {
 
@@ -25,7 +25,11 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<div className="topbar">
-					<h1 className="my-name">Evan Conway</h1>
+					<h1> 
+						<Link className="my-name" to="/">
+							Evan Conway
+						</Link>
+					</h1>
 					<Navbar/>
 				</div>
 				<div className="contentwrapper">
@@ -34,6 +38,7 @@ function App() {
 							<Route path="/projects">Literally nothing here yet.</Route>
 							<Route path="/about">The about page.</Route>
 							<Route path="/blog"><Blog/></Route>
+							<Route path="/">Home page with no content lol.</Route>
 						</Switch>
 					</div>
 				</div>
