@@ -65,12 +65,8 @@ html {
 	margin: 0px;
 	padding: 0px;
 }
-.blogpost * {
-	/* The automatic margin settings were making life harder, so we're resetting margins for blogposts. */
-	margin: 0px;
-}
+
 .blogback {
-	margin-bottom: 10px;
 	padding: 5px 0px;
 	text-decoration: none;
 }
@@ -94,10 +90,16 @@ html {
 	padding-left: 34px;
 }
 .project {
+	max-width: 1200px;
+}
+.project a{
 	font-size: 1.7em;
 }
 img {
 	width: 400px;
+}
+article a {
+	margin: 0px 20px;
 }
 @media screen and (min-width: 700px) {
 	.topbar {
