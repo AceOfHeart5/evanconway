@@ -3,6 +3,9 @@
 	background: #222222;
 	min-height: 100vh;
 }
+.App * {
+	color: white;
+}
 /* 
 This forces scroll bar to always exist. 
 Helps prevent change in site width when clicking "Blog". 
@@ -25,7 +28,6 @@ html {
 	padding: 2px;
 	margin: 5px;
 	text-decoration: none;
-	color: white;
 }
 .nav.selected {
 	margin-bottom: 3px;
@@ -47,7 +49,6 @@ html {
 	list-style: none;
 }
 .bloglink {
-	color: white;
 	text-decoration: none;
 }
 .bloglisting {
@@ -71,7 +72,6 @@ html {
 .blogback {
 	margin-bottom: 10px;
 	padding: 5px 0px;
-	color: white;
 	text-decoration: none;
 }
 .blogback:hover {
@@ -90,8 +90,14 @@ html {
 	padding: 10px;
 }
 .my-name {
-	color: white;
 	text-decoration: none;
+	padding-left: 34px;
+}
+.project {
+	font-size: 1.7em;
+}
+img {
+	width: 400px;
 }
 @media screen and (min-width: 700px) {
 	.topbar {

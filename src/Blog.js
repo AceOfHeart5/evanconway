@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+import BLOGS from './assets/blogs.js';
 const Blog = () => {
-    const [blogs, setBlogs] = useState(null);
     const [viewing, setViewing] = useState("blog");
-
-    // get blog data
-    // this useEffect replaces ComponentDidMount in class components
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.json())
-            .then(json => setBlogs(json));
-    }, []);
 
     // update component when blogs is populated
     // this useEffect replaces componentDidUpdate in class components
-    useEffect(() => {}, [blogs, viewing]);
+    useEffect(() => {}, [viewing]);
 
     const history = useHistory();
 
@@ -30,19 +21,17 @@ const Blog = () => {
     }, [history]);
 
     const getBlogListing = (blog, key) => {
-        // We will replace this description code with something else later
-        let description = blog.body.slice(0, 100) + "...";
         return (
             <Link className="bloglink" key={key} to={`/blog/${String(key)}`}>
                 <li className="bloglisting">
                     <h3>{blog.title}</h3>
-                    <div>{description}</div>
+                    <div>{blog.description}</div>
                 </li>
             </Link >
         )
     }
 
-    if (!blogs) {
+    if (!BLOGS) {
         return (
             // just an empty div, but we make it the height of the screen to avoid drawing
             // a single border bar when changing to the blog, looks nice this way
@@ -57,7 +46,7 @@ const Blog = () => {
         return (
             <div className="blogwrapper">
                 <ul className="bloglist">
-                    {blogs.map((e, i) => getBlogListing(e, i))}
+                    {BLOGS.map((e, i) => getBlogListing(e, i))}
                 </ul>
             </div>
         );
@@ -65,12 +54,11 @@ const Blog = () => {
 
     /* Return blog post if we're looking at /blog/integer */
     if (Number.isInteger(parseInt(lastPart))) {
-        const blog = blogs[parseInt(lastPart)];
+        const blog = BLOGS[parseInt(lastPart)];
         return (
             <div className="blogpost">
                 <Link className="blogback" to="/blog">Back To List</Link>
-                <h1>{blog.title}</h1>
-                <main>{blog.body}</main>
+                {blog.body}
             </div>
         );
     }
