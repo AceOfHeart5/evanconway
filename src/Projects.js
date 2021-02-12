@@ -4,6 +4,28 @@ const Projects = () => {
     return (
         <div>
             <section className="project">
+                <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
+                <h3>Flexible text display for game Maker Studio projects.</h3>
+                <img src={IMAGES.text.fade} alt="Subtle text typing effect."/>
+                <img src={IMAGES.text.matrix} alt="Matrix style typing effect."/>
+                <p>
+                    A key part of any video game is text boxes. Whenever I'm working on a project, I often find myself wanting to draw text with a single word highlighted a different 
+                    color, or maybe one word floats in place. This isn't that hard to do, but it's very annoying to have to do it over again for each project. I also wanted to display 
+                    text that could type out, but still have special effects added. So I made a special collection of classes and functions for giving text interesting effects. 
+                </p>
+            </section>
+            <section className="project">
+                <a className="projectlink" href="https://github.com/AceOfHeart5/Meme-Machine-discord-bot">Discord Bot</a>
+                <h3>A bot for a private Discord server.</h3>
+                <img src={IMAGES.discordbot.uparrow} alt="up arrow reaction" />
+                <img src={IMAGES.discordbot.command} alt="Programming a discord bot."/>
+                <img src={IMAGES.discordbot.demonstrate} alt="Bot performing its program."/>
+                <p>I was inspired to make this bot after a friend made a Beetljuice reference on a private server as a joke to "summon" us. It does that, and converts messages containing only '^' into 
+                    up arrow reactions on the previous message. It's main feature though, is programmable responses. If a user sends a message with the syntax: Hey bot! When I say "call" you say "response", 
+                    the bot will respond with the "response" anytime someone messages the "call". 
+                </p>
+            </section>
+            <section className="project">
                 <a className="projectlink" href="https://aceofheart5.github.io/WebMidiLearning/">Piano Site Reading Web App</a>
                 <h3>Web app for practicing sight reading with an electric piano.</h3>
                 <img src={IMAGES.sitereadingapp} alt="pic of sheet music app"/>

@@ -94,7 +94,8 @@ html {
 }
 .project {
 	max-width: 1200px;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
+	border-bottom: 4px solid gray;
 }
 .project a.projectlink{
 	font-size: 1.7em;
@@ -104,7 +105,7 @@ a:hover {
 }
 img {
 	margin: 0px 20px;
-	width: 400px;
+	width: 500px;
 }
 @media screen and (min-width: 700px) {
 	.topbar {
