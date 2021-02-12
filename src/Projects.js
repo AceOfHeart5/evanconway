@@ -3,15 +3,16 @@ import IMAGES from './assets/images.js';
 const Projects = () => {
     return (
         <div>
+            <section style={{ paddingBottom: "10px" }} className="project">
+                <a href="https://github.com/AceOfHeart5?tab=repositories" className="projectlink">Link To Github</a>
+            </section>
             <section className="project">
                 <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
-                <h3>Flexible text display for game Maker Studio projects.</h3>
+                <h3>Flexible text display for Game Maker Studio projects.</h3>
                 <img src={IMAGES.text.code} alt="Code for colored text."/>
                 <img src={IMAGES.text.colors} alt="Colored text."/>
                 <img src={IMAGES.text.combine} alt="Combined text effects with typing." />
                 <img src={IMAGES.text.typing} alt="Special typing effects." />
-                <img src={IMAGES.text.fade} alt="Subtle text typing effect."/>
-                <img src={IMAGES.text.matrix} alt="Matrix style typing effect."/>
                 <p>
                     A key part of any video game is text boxes. Whenever I'm working on a project, I often find myself wanting to draw text with a single word highlighted a different 
                     color, or maybe one word floats in place. This isn't that hard to do, but it's very annoying to have to do it over again for each project. I also wanted to display 
@@ -24,7 +25,8 @@ const Projects = () => {
                 <img src={IMAGES.discordbot.uparrow} alt="up arrow reaction" />
                 <img src={IMAGES.discordbot.command} alt="Programming a discord bot."/>
                 <img src={IMAGES.discordbot.demonstrate} alt="Bot performing its program."/>
-                <p>I was inspired to make this bot after a friend made a Beetljuice reference on a private server as a joke to "summon" us. It does that, and converts messages containing only '^' into 
+                <p>
+                    I was inspired to make this bot after a friend made a Beetljuice reference on a private server as a joke to "summon" us. It does that, and converts messages containing only '^' into 
                     up arrow reactions on the previous message. It's main feature though, is programmable responses. If a user sends a message with the syntax: Hey bot! When I say "call" you say "response", 
                     the bot will respond with the "response" anytime someone messages the "call". 
                 </p>
@@ -34,7 +36,8 @@ const Projects = () => {
                 <h3>Web app for practicing sight reading with an electric piano.</h3>
                 <img src={IMAGES.sitereadingapp} alt="pic of sheet music app"/>
                 <main>
-                    <p>Finding good material to practice sight reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
+                    <p>
+                        Finding good material to practice sight reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
                         any real improvement. In the past I've used typing test programs to improve my typing speed, so I thought I'd make something similar but for sight reading. The 
                         app randomly generates sheet music according to options set by the user. When run in a supported brower (Google Chrome is the only one right now), the app can 
                         detect midi input from an electric piano. The green highlighted note cursor will only advance once the correct notes have been played. 
