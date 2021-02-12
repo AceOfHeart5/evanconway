@@ -64,16 +64,19 @@ html {
 .blogpost {
 	margin: 0px;
 	padding: 0px;
+	max-width: 1200px;
 }
 
 .blogback {
-	padding: 5px 0px;
+	display: block;
+	width: 82px; /* Complete and total magic number*/
+	padding-bottom: 5px;
 	text-decoration: none;
 }
 .blogback:hover {
 	cursor: pointer;
 	border-bottom: 2px solid white;
-	margin-bottom: 8px;
+	padding-bottom: 3px;
 }
 /* assume phone style */
 .topbar {
@@ -87,19 +90,21 @@ html {
 }
 .my-name {
 	text-decoration: none;
-	padding-left: 34px;
+	margin-left: 34px;
 }
 .project {
 	max-width: 1200px;
+	margin-bottom: 70px;
 }
-.project a{
+.project a.projectlink{
 	font-size: 1.7em;
 }
-img {
-	width: 400px;
+a:hover {
+	background-color: #333;
 }
-article a {
+img {
 	margin: 0px 20px;
+	width: 400px;
 }
 @media screen and (min-width: 700px) {
 	.topbar {
