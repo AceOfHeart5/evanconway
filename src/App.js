@@ -4,16 +4,18 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Projects from './Projects';
 import Blog from './Blog.js';
+import About from './About.js';
 
 function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
 				<div className="topbar">
-					<h1> 
-						<Link className="my-name" to="/">
+					<h1 className="my-name"> 
+						Evan Conway
+						{/*<Link className="my-name" to="/">
 							Evan Conway
-						</Link>
+						</Link>*/}
 					</h1>
 					<Navbar/>
 				</div>
@@ -21,11 +23,8 @@ function App() {
 					<div className="contentborder">
 						<Switch>
 							<Route path="/projects"><Projects/></Route>
-							<Route path="/about">The about page.</Route>
 							<Route path="/blog"><Blog/></Route>
-							<Route path="/">
-								Home page with no content lol.
-							</Route>
+							<Route path="/"><About/></Route>
 						</Switch>
 					</div>
 				</div>

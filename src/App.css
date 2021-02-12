@@ -92,6 +92,9 @@ html {
 	text-decoration: none;
 	margin-left: 34px;
 }
+.my-name:hover {
+	cursor: default;
+}
 .project {
 	max-width: 1200px;
 	margin-bottom: 50px;

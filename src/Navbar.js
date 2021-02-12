@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const [selected, setSelected] = useState();
+    const [selected, setSelected] = useState("");
 
     /* I stole this code from online, so I'm going to try and explain it as best
     I can. This effect appears to log a listener function into the history object. 
@@ -30,9 +30,9 @@ const Navbar = () => {
 
     return ( 
         <div className="navbar">
-            <Navlink link="blog" selected={selected}>Blog</Navlink>
+            <Navlink link="" selected={selected}>About</Navlink>
             <Navlink link="projects" selected={selected}>Projects</Navlink>
-            <Navlink link="about" selected={selected}>About</Navlink>
+            {/*<Navlink link="blog" selected={selected}>Blog</Navlink>*/}
         </div>
      );
 }
