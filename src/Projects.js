@@ -6,6 +6,10 @@ const Projects = () => {
             <section className="project">
                 <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
                 <h3>Flexible text display for game Maker Studio projects.</h3>
+                <img src={IMAGES.text.code} alt="Code for colored text."/>
+                <img src={IMAGES.text.colors} alt="Colored text."/>
+                <img src={IMAGES.text.combine} alt="Combined text effects with typing." />
+                <img src={IMAGES.text.typing} alt="Special typing effects." />
                 <img src={IMAGES.text.fade} alt="Subtle text typing effect."/>
                 <img src={IMAGES.text.matrix} alt="Matrix style typing effect."/>
                 <p>

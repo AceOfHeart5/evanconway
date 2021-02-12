@@ -20,7 +20,7 @@ const About = () => {
                 <li>Learned JavaScript, HTML, and CSS independently.</li>
                 <li>Learned ABCjs music notation library to display sheet music in HTML.</li>
                 <li>Created JavaScript classes to model pitches, chords, and randomly generate notes.</li>
-                <li>Created Music Sigh Reading App</li>
+                <li>Created Music Sight Reading App</li>
                 <li>Created decorative text boxes with string parser to customize appearance.</li>
                 <li>Created movement code for 2D games using Bresenham's Line Algorithm.</li>
                 <li>Solved LeetCode questions in daily virtual pairing sessions with experienced devs.</li>
