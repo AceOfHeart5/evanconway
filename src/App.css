@@ -89,8 +89,7 @@ html {
 	padding: 10px;
 }
 .my-name {
-	text-decoration: none;
-	margin-left: 34px;
+	
 }
 .my-name:hover {
 	cursor: default;
@@ -108,9 +107,12 @@ a:hover {
 }
 img {
 	margin: 0px 20px;
-	width: 500px;
+	width: 250px;
 }
 @media screen and (min-width: 700px) {
+	img {
+		width: 500px;
+	}
 	.topbar {
 		grid-template-columns: 50% 50%;
 		border-bottom: 2px solid white;
