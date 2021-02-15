@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState(window.location.hash.split('/')[1]);
 
     /* I stole this code from online, so I'm going to try and explain it as best
     I can. This effect appears to log a listener function into the history object. 
@@ -14,8 +14,11 @@ const Navbar = () => {
     const history = useHistory();
     useEffect(() => {
         return history.listen((location) => {
-            // we use index 1 here because an empty string is the first value for some reason
-            setSelected(location.pathname.split('/')[1]);
+            /* We use index 1 in the returned array from split because index 0 is always
+            an empty string. Also, we used to use the location value passed into this
+            function before we were using hash urls. But after changing, that value
+            doesn't work, and we have to grab it from the window. */
+            setSelected(window.location.hash.split('/')[1]);
         })
     }, [history]) 
 
