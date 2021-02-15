@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Projects from './Projects';
 import Blog from './Blog.js';
@@ -9,7 +9,7 @@ import About from './About.js';
 function App() {
 	return (
 		<div className="App">
-			<BrowserRouter>
+			<HashRouter basename="/">
 				<div className="topbar">
 					<h1 className="my-name"> 
 						Evan Conway
@@ -28,7 +28,7 @@ function App() {
 						</Switch>
 					</div>
 				</div>
-			</BrowserRouter>
+			</HashRouter>
 		</div>
 	);
 }

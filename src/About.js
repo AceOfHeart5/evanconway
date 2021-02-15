@@ -14,7 +14,7 @@ const About = () => {
                 <li>Composes stock music for Modus Operandi Music Library</li>
                 <li>Pieces aired on Fox, CBS, NBC, and globally.</li>
             </ul>
-            <h4 style={noBottom}>Particpant at the Recurse Center</h4>
+            <h4 style={noBottom}>Participant at the Recurse Center</h4>
             <h5 style={smallTop}>July 2020 to September 2020</h5>
             <ul>
                 <li>Learned JavaScript, HTML, and CSS independently.</li>
