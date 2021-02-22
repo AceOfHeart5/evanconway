@@ -8,15 +8,15 @@ const Projects = () => {
             </section>
             <section className="project">
                 <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
-                <h3>Flexible text display for Game Maker Studio projects.</h3>
+                <h3>Flexible text display for GameMaker Studio projects.</h3>
                 <img src={IMAGES.text.code} alt="Code for colored text."/>
                 <img src={IMAGES.text.colors} alt="Colored text."/>
                 <img src={IMAGES.text.combine} alt="Combined text effects with typing." />
                 <img src={IMAGES.text.typing} alt="Special typing effects." />
                 <p>
-                    A key part of any video game is text boxes. Whenever I'm working on a project, I often find myself wanting to draw text with a single word highlighted a different 
-                    color, or maybe one word floats in place. This isn't that hard to do, but it's very annoying to have to do it over again for each project. I also wanted to display 
-                    text that could type out, but still have special effects added. So I made a special collection of classes and functions to give text interesting effects. 
+                    A key part of any video game is text boxes. When I'm working on a project, I often find myself wanting to draw text with a single word highlighted a different 
+                    color or maybe floating in place. This isn't that hard to do, but it's cumbersome to have to do it over again for each project. I also wanted to display 
+                    text that could type out still have added special effects. So I made a special collection of classes and functions to give text interesting effects. 
                 </p>
             </section>
             <section className="project">
@@ -26,31 +26,31 @@ const Projects = () => {
                 <img src={IMAGES.discordbot.command} alt="Programming a discord bot."/>
                 <img src={IMAGES.discordbot.demonstrate} alt="Bot performing its program."/>
                 <p>
-                    I was inspired to make this bot after a friend made a Beetljuice reference on a private server as a joke to "summon" us. It also converts messages containing only '^' into 
-                    up arrow reactions on the previous message. It's main feature though, is programmable responses. If a user sends a message with the syntax: Hey bot! When I say "call" you say "response", 
+                    I was inspired to make this bot after a friend made a Beetlejuice reference on a private server as a joke to "summon" us. It also converts messages containing only '^' into 
+                    up arrow reactions on the previous message. Its main feature, though, is programmable responses. If a user sends a message with the syntax "Hey bot! When I say 'call' you say 'response'", 
                     the bot will respond with "response" anytime someone messages the "call". 
                 </p>
             </section>
             <section className="project">
-                <a className="projectlink" href="https://aceofheart5.github.io/WebMidiLearning/">Piano Site Reading Web App</a>
-                <h3>Web app for practicing sight reading with an electric piano.</h3>
+                <a className="projectlink" href="https://aceofheart5.github.io/WebMidiLearning/">Piano Sight-Reading Web App</a>
+                <h3>Web app for practicing sight-reading with an electric piano.</h3>
                 <img src={IMAGES.sitereadingapp} alt="pic of sheet music app"/>
                 <main>
                     <p>
-                        Finding good material to practice sight reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
+                        Finding good material to practice sight-reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
                         any real improvement. In the past I've used typing test programs to improve my typing speed, so I thought I'd make something similar, but for sight reading. The 
-                        app randomly generates sheet music according to options set by the user. When run in a supported brower (Google Chrome is the only one right now), the app can 
-                        detect midi input from an electric piano. The green highlighted note cursor will only advance once the correct notes have been played. 
+                        app randomly generates sheet music according to options set by the user. When run in a supported browser (just Google Chrome right now), the app can 
+                        detect MIDI input from an electric piano. The green-highlighted note cursor only advances once the correct notes have been played. 
                     </p>
                 </main>
             </section>
             <section className="project">
-                <a className="projectlink" href="https://gla55world.itch.io/the-evil-tower">Game Maker Studio Project</a>
-                <h3>A short side scroller action platformer made in Game Maker Studio 2.</h3>
+                <a className="projectlink" href="https://gla55world.itch.io/the-evil-tower">GameMaker Studio Project</a>
+                <h3>A short side-scroller action platformer made in GameMaker Studio 2.</h3>
                 <img src={IMAGES.eviltower.one} alt="pic of a video game" />
                 <main>
                     <p>
-                        My goal when creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but 
+                        My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but 
                         it does have most of the features anyone would expect from a modern indie game:
                     </p>
                     <ul>
@@ -64,7 +64,7 @@ const Projects = () => {
                         <li>options menu for changing settings</li>
                         <li>cutscenes</li>
                         <li>character interactions</li>
-                        <li>typing effect in text boxes</li>
+                        <li>text boxes with typing effects</li>
                     </ul>
                 </main>
             </section>
@@ -77,7 +77,7 @@ const Projects = () => {
             </section>
             <section className="project">
                 <a href="https://github.com/AceOfHeart5/AceOfHeart5.github.io" className="projectlink">This Website</a>
-                <p>This site was made with React. Honestly React is waaaaaaay overkill for this, but I wanted more experience with React, and what better way to do that than to make something.</p>
+                <p>This site was made with React. Honestly React is waaaaaaay overkill for this, but I wanted more experience with React, and what better way to accomplish that than to make something?</p>
             </section>
         </div>
     );
