@@ -6,6 +6,8 @@ import Projects from './Projects';
 import Blog from './Blog.js';
 import About from './About.js';
 
+// omg a change!
+
 function App() {
 	return (
 		<div className="App">
