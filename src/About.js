@@ -5,7 +5,7 @@ const About = () => {
         <article style={{ maxWidth: "900px" }}>
             <p style={{paddingBottom: "10px", borderColor: "grey", borderBottomStyle: "solid"}}>
                 Evan Conway is a composer and programmer based in Rochester, NY. He writes for the Modus Operandi music library and has been pursuing 
-                programming professionally for the last two and a half years. In his spare time, he writes games with GameMaker Studio 2.
+                programming professionally since 2018. In his spare time, he writes games with GameMaker Studio 2.
             </p>
             <h1>Experience</h1>
             <h4 style={noBottom}>Composer</h4>
