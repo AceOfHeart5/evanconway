@@ -10,6 +10,7 @@ import textcombine from './textcombine.gif';
 import texttyping from './texttyping.gif';
 import textmatrix from './textmatrix.gif';
 import textfade from './textfade.gif';
+import timemanager from './timemanager.png';
 
 const IMAGES = {
     eviltower: {
@@ -29,7 +30,8 @@ const IMAGES = {
         matrix: textmatrix,
         fade: textfade
     },
-    sitereadingapp: sitereadingapp
+    sitereadingapp: sitereadingapp,
+    timemanager: timemanager
 };
 
 export default IMAGES;

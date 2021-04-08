@@ -7,6 +7,14 @@ const Projects = () => {
                 <a href="https://github.com/AceOfHeart5?tab=repositories" className="projectlink">Link To Github</a>
             </section>
             <section className="project">
+                <a href="https://time-manager-hhvqs.ondigitalocean.app/" className="projectLink">Time Manager</a>
+                <h3>Time Management App</h3>
+                <img src={IMAGES.timemanager} alt="time manager app"/>
+                <p>
+                    A simple time management app to keep track of time spent on tasks. Made with React.
+                </p>
+            </section>
+            <section className="project">
                 <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
                 <h3>Flexible text display for GameMaker Studio projects.</h3>
                 <img src={IMAGES.text.code} alt="Code for colored text."/>
