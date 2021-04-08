@@ -1,22 +1,39 @@
 import IMAGES from './assets/images.js';
 
 const Projects = () => {
+
+    const getHeader = (title, linkGithub = null, linkProject = null) => {
+        const result = [];
+        result.push(<h2>{title}</h2>);
+        if (linkGithub !== null) {
+            result.push(
+                <a href={linkGithub} className="link-github" style={{paddingRight: '10px'}}>Github</a>
+            )
+        }
+        if (linkProject !== null) {
+            result.push(
+                <a href={linkProject} className="link-project">Project</a>
+            )
+        }
+        return (
+            <div style={{paddingBottom: '15px'}}>{result}</div>
+        );
+    };
+
     return (
         <div>
             <section style={{ paddingBottom: "10px" }} className="project">
                 <a href="https://github.com/AceOfHeart5?tab=repositories" className="projectlink">Link To Github</a>
             </section>
             <section className="project">
-                <a href="https://time-manager-hhvqs.ondigitalocean.app/" className="projectLink">Time Manager</a>
-                <h3>Time Management App</h3>
+                {getHeader('Time Manager', 'https://github.com/AceOfHeart5/TimeManager', 'https://time-manager-hhvqs.ondigitalocean.app/')}
                 <img src={IMAGES.timemanager} alt="time manager app"/>
                 <p>
                     A simple time management app to keep track of time spent on tasks. Made with React.
                 </p>
             </section>
             <section className="project">
-                <a className="projectlink" href="https://github.com/AceOfHeart5/Text_Boxes">Text Boxes</a>
-                <h3>Flexible text display for GameMaker Studio projects.</h3>
+                {getHeader('Text Boxes', 'https://github.com/AceOfHeart5/Text_Boxes')}
                 <img src={IMAGES.text.code} alt="Code for colored text."/>
                 <img src={IMAGES.text.colors} alt="Colored text."/>
                 <img src={IMAGES.text.combine} alt="Combined text effects with typing." />
@@ -28,8 +45,7 @@ const Projects = () => {
                 </p>
             </section>
             <section className="project">
-                <a className="projectlink" href="https://github.com/AceOfHeart5/Meme-Machine-discord-bot">Discord Bot</a>
-                <h3>A bot for a private Discord server.</h3>
+                {getHeader('Discord Bot', 'https://github.com/AceOfHeart5/Meme-Machine-discord-bot')}
                 <img src={IMAGES.discordbot.uparrow} alt="up arrow reaction" />
                 <img src={IMAGES.discordbot.command} alt="Programming a discord bot."/>
                 <img src={IMAGES.discordbot.demonstrate} alt="Bot performing its program."/>
@@ -40,51 +56,45 @@ const Projects = () => {
                 </p>
             </section>
             <section className="project">
-                <a className="projectlink" href="https://aceofheart5.github.io/WebMidiLearning/">Piano Sight-Reading Web App</a>
-                <h3>Web app for practicing sight-reading with an electric piano.</h3>
+                {getHeader('Piano Sight-Reading Web App', 'https://github.com/AceOfHeart5/WebMidiLearning', 'https://aceofheart5.github.io/WebMidiLearning/')}
                 <img src={IMAGES.sitereadingapp} alt="pic of sheet music app"/>
-                <main>
-                    <p>
-                        Finding good material to practice sight-reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
-                        any real improvement. In the past I've used typing test programs to improve my typing speed, so I thought I'd make something similar, but for sight reading. The 
-                        app randomly generates sheet music according to options set by the user. When run in a supported browser (just Google Chrome right now), the app can 
-                        detect MIDI input from an electric piano. The green-highlighted note cursor only advances once the correct notes have been played. 
-                    </p>
-                </main>
-            </section>
-            <section className="project">
-                <a className="projectlink" href="https://gla55world.itch.io/the-evil-tower">GameMaker Studio Project</a>
-                <h3>A short side-scroller action platformer made in GameMaker Studio 2.</h3>
-                <img src={IMAGES.eviltower.one} alt="pic of a video game" />
-                <main>
-                    <p>
-                        My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but 
-                        it does have most of the features anyone would expect from a modern indie game:
-                    </p>
-                    <ul>
-                        <li>sprites with animations</li>
-                        <li>attacking and blocking mechanics</li>
-                        <li>hitstun</li>
-                        <li>keyboard and controller support</li>
-                        <li>rebindable controls</li>
-                        <li>sound effects</li>
-                        <li>music</li>
-                        <li>options menu for changing settings</li>
-                        <li>cutscenes</li>
-                        <li>character interactions</li>
-                        <li>text boxes with typing effects</li>
-                    </ul>
-                </main>
-            </section>
-            <section className="project">
-                <a className="projectlink" href="https://www.licenselab.com/search/tracks/list/k_conway/">Music</a>
-                <h3>250+ pieces of music written for TV, radio, and various media.</h3>
                 <p>
-                    Each song is part of an album, and each album fits a specific theme or mood. Some of my favorites are <a href="https://www.licenselab.com/track/8c1c1ca2bc3c191f/beautiful-entanglement">Beautiful Entanglement</a>, <a href="https://www.licenselab.com/track/1d98ce3e652151e5/nuts-and-bolts">Nuts And Bolts</a>, <a href="https://www.licenselab.com/track/9c79172e951d2ebb/glorious-dawn">Glorious Dawn</a>, and <a href="https://www.licenselab.com/track/d537ecbc9ed581ad/adorable-saves-the-day">Adorable Saves The Day</a>.
+                    Finding good material to practice sight-reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
+                    any real improvement. In the past I've used typing test programs to improve my typing speed, so I thought I'd make something similar, but for sight reading. The 
+                    app randomly generates sheet music according to options set by the user. When run in a supported browser (just Google Chrome right now), the app can 
+                    detect MIDI input from an electric piano. The green-highlighted note cursor only advances once the correct notes have been played. 
                 </p>
             </section>
             <section className="project">
-                <a href="https://github.com/AceOfHeart5/AceOfHeart5.github.io" className="projectlink">This Website</a>
+                {getHeader('GameMaker Studio Project', 'https://github.com/AceOfHeart5/Altered-Platformer', 'https://gla55world.itch.io/the-evil-tower')}
+                <img src={IMAGES.eviltower.one} alt="pic of a video game" />
+                <p>
+                    My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but 
+                    it does have most of the features anyone would expect from a modern indie game:
+                </p>
+                <ul>
+                    <li>sprites with animations</li>
+                    <li>attacking and blocking mechanics</li>
+                    <li>hitstun</li>
+                    <li>keyboard and controller support</li>
+                    <li>rebindable controls</li>
+                    <li>sound effects</li>
+                    <li>music</li>
+                    <li>options menu for changing settings</li>
+                    <li>cutscenes</li>
+                    <li>character interactions</li>
+                    <li>text boxes with typing effects</li>
+                </ul>
+            </section>
+            <section className="project">
+                {getHeader('Music', null, 'https://www.licenselab.com/search/tracks/list/k_conway/')}
+                <p>
+                    Over 250 piese of music written for TV, radio, and various media. Each song is part of an album, and each album fits a 
+                    specific theme or mood. Some of my favorites are <a href="https://www.licenselab.com/track/8c1c1ca2bc3c191f/beautiful-entanglement">Beautiful Entanglement</a>, <a href="https://www.licenselab.com/track/1d98ce3e652151e5/nuts-and-bolts">Nuts And Bolts</a>, <a href="https://www.licenselab.com/track/9c79172e951d2ebb/glorious-dawn">Glorious Dawn</a>, and <a href="https://www.licenselab.com/track/d537ecbc9ed581ad/adorable-saves-the-day">Adorable Saves The Day</a>.
+                </p>
+            </section>
+            <section className="project">
+                {getHeader('This Website', 'https://github.com/AceOfHeart5/AceOfHeart5.github.io')}
                 <p>This site was made with React. Honestly React is waaaaaaay overkill for this, but I wanted more experience with React, and what better way to accomplish that than to make something?</p>
             </section>
         </div>
