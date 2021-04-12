@@ -11,6 +11,7 @@ import texttyping from './texttyping.gif';
 import textmatrix from './textmatrix.gif';
 import textfade from './textfade.gif';
 import timemanager from './timemanager.png';
+import guestbook from './guestbook.png';
 
 const IMAGES = {
     eviltower: {
@@ -31,7 +32,8 @@ const IMAGES = {
         fade: textfade
     },
     sitereadingapp: sitereadingapp,
-    timemanager: timemanager
+    timemanager: timemanager,
+    guestbook: guestbook
 };
 
 export default IMAGES;

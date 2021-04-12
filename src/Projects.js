@@ -26,10 +26,17 @@ const Projects = () => {
                 <a href="https://github.com/AceOfHeart5?tab=repositories" className="projectlink">Link To Github</a>
             </section>
             <section className="project">
+                {getHeader('Guestbook', 'https://github.com/AceOfHeart5/guestbook-backend', 'https://guestbook-l5nnz.ondigitalocean.app/')}
+                <img src={IMAGES.guestbook} alt="guestbook app"/>
+                <p>
+                    A simple guestbook app. Made with react, express, and postgres hosted on Digital Ocean.
+                </p>
+            </section>
+            <section className="project">
                 {getHeader('Time Manager', 'https://github.com/AceOfHeart5/TimeManager', 'https://time-manager-hhvqs.ondigitalocean.app/')}
                 <img src={IMAGES.timemanager} alt="time manager app"/>
                 <p>
-                    A simple time management app to keep track of time spent on tasks. Made with React.
+                    A time management app to keep track of time spent on tasks. Made with React.
                 </p>
             </section>
             <section className="project">
