@@ -29,7 +29,7 @@ const Projects = () => {
                 {getHeader('Guestbook', 'https://github.com/AceOfHeart5/guestbook-backend', 'https://guestbook-l5nnz.ondigitalocean.app/')}
                 <img src={IMAGES.guestbook} alt="guestbook app"/>
                 <p>
-                    A simple guestbook app. Made with react, express, and postgres hosted on Digital Ocean.
+                    A simple guestbook app. Made with React, Express, and Postgres hosted on Digital Ocean.
                 </p>
             </section>
             <section className="project">
