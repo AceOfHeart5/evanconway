@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bf8ab909.chunk.css",
-    "main.js": "/static/js/main.17f028c1.chunk.js",
-    "main.js.map": "/static/js/main.17f028c1.chunk.js.map",
+    "main.js": "/static/js/main.abb3ac86.chunk.js",
+    "main.js.map": "/static/js/main.abb3ac86.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c758b8f3.js",
     "runtime-main.js.map": "/static/js/runtime-main.c758b8f3.js.map",
     "static/js/2.30822a71.chunk.js": "/static/js/2.30822a71.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/botdemonstrate.9120feaa.gif": "/static/media/botdemonstrate.9120feaa.gif",
     "static/media/eviltower01.cfe02c67.png": "/static/media/eviltower01.cfe02c67.png",
     "static/media/eviltower02.c63a24e3.png": "/static/media/eviltower02.c63a24e3.png",
+    "static/media/guestbook.155ec602.png": "/static/media/guestbook.155ec602.png",
     "static/media/sitereadingapp.5c580855.png": "/static/media/sitereadingapp.5c580855.png",
     "static/media/textcode.0f3709ae.png": "/static/media/textcode.0f3709ae.png",
     "static/media/textcolors.d2414af6.gif": "/static/media/textcolors.d2414af6.gif",
@@ -30,6 +31,6 @@
     "static/js/runtime-main.c758b8f3.js",
     "static/js/2.30822a71.chunk.js",
     "static/css/main.bf8ab909.chunk.css",
-    "static/js/main.17f028c1.chunk.js"
+    "static/js/main.abb3ac86.chunk.js"
   ]
 }
