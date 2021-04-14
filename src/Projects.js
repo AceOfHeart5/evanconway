@@ -73,6 +73,13 @@ const Projects = () => {
                 </p>
             </section>
             <section className="project">
+                {getHeader('GameMaker Studio Prototype', 'https://github.com/AceOfHeart5/TopDownAdventure/tree/2.3update', 'https://gla55world.itch.io/top-down-adventure')}
+                <img src={IMAGES.topDownAdventure} alt="pic of a video game"/>
+                <p>
+                    This project was about exploring GameMaker in further depth. I spent most of my time with this project making a modular state system.
+                </p>
+            </section>
+            <section className="project">
                 {getHeader('GameMaker Studio Project', 'https://github.com/AceOfHeart5/Altered-Platformer', 'https://gla55world.itch.io/the-evil-tower')}
                 <img src={IMAGES.eviltower.one} alt="pic of a video game" />
                 <p>
