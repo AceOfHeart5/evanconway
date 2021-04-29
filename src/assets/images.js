@@ -13,6 +13,8 @@ import textfade from './textfade.gif';
 import timemanager from './timemanager.png';
 import guestbook from './guestbook.png';
 import topDownAdventure from './topdownadventure.png';
+import dialogSceneCode from './DialogScene_Code.png';
+import dialogSceneExample from './DialogScene_Example.gif';
 
 const IMAGES = {
     eviltower: {
@@ -35,7 +37,11 @@ const IMAGES = {
     sitereadingapp: sitereadingapp,
     timemanager: timemanager,
     guestbook: guestbook,
-    topDownAdventure: topDownAdventure
+    topDownAdventure: topDownAdventure,
+    dialogScene: {
+        code: dialogSceneCode,
+        example: dialogSceneExample
+    }
 };
 
 export default IMAGES;

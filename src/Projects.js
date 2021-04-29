@@ -26,6 +26,15 @@ const Projects = () => {
                 <a href="https://github.com/AceOfHeart5?tab=repositories" className="projectlink">Link To Github</a>
             </section>
             <section className="project">
+                {getHeader('Dialog Tree', 'https://github.com/AceOfHeart5/DialogScene', 'https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0')}
+                <img src={IMAGES.dialogScene.code} alt='dialog scene code'/>
+                <img src={IMAGES.dialogScene.example} alt='dialog scene example'/>
+                <p>
+                    Making dialog trees in games is hard. This is one of my first attempts at making a system that makes it easy to
+                    create dialog right in the code. 
+                </p>
+            </section>
+            <section className="project">
                 {getHeader('Guestbook', 'https://github.com/AceOfHeart5/guestbook-backend', 'https://guestbook-l5nnz.ondigitalocean.app/')}
                 <img src={IMAGES.guestbook} alt="guestbook app"/>
                 <p>
