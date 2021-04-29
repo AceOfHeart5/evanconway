@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bf8ab909.chunk.css",
-    "main.js": "/static/js/main.837e12f5.chunk.js",
-    "main.js.map": "/static/js/main.837e12f5.chunk.js.map",
+    "main.js": "/static/js/main.70258416.chunk.js",
+    "main.js.map": "/static/js/main.70258416.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c758b8f3.js",
     "runtime-main.js.map": "/static/js/runtime-main.c758b8f3.js.map",
     "static/js/2.30822a71.chunk.js": "/static/js/2.30822a71.chunk.js",
@@ -12,6 +12,8 @@
     "index.html": "/index.html",
     "static/css/main.bf8ab909.chunk.css.map": "/static/css/main.bf8ab909.chunk.css.map",
     "static/js/2.30822a71.chunk.js.LICENSE.txt": "/static/js/2.30822a71.chunk.js.LICENSE.txt",
+    "static/media/DialogScene_Code.b9077b28.png": "/static/media/DialogScene_Code.b9077b28.png",
+    "static/media/DialogScene_Example.a7f15a84.gif": "/static/media/DialogScene_Example.a7f15a84.gif",
     "static/media/botcommand.86d69c42.gif": "/static/media/botcommand.86d69c42.gif",
     "static/media/botdemonstrate.9120feaa.gif": "/static/media/botdemonstrate.9120feaa.gif",
     "static/media/eviltower01.cfe02c67.png": "/static/media/eviltower01.cfe02c67.png",
@@ -32,6 +34,6 @@
     "static/js/runtime-main.c758b8f3.js",
     "static/js/2.30822a71.chunk.js",
     "static/css/main.bf8ab909.chunk.css",
-    "static/js/main.837e12f5.chunk.js"
+    "static/js/main.70258416.chunk.js"
   ]
 }
