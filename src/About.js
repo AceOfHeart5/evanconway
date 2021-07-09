@@ -8,6 +8,13 @@ const About = () => {
                 programming professionally since 2018. In his spare time, he writes games with GameMaker Studio 2.
             </p>
             <h1>Experience</h1>
+            <h4 style={noBottom}>Software Engineering Intern</h4>
+            <h5 style={smallTop}>June 2021 to Present</h5>
+            <ul>
+                <li>Creates chatbots with Twilio Studio</li>
+                <li>Automates creation of Twilio Flows using Go</li>
+                <li>Created custom JSON format to represent sms surveys</li>
+            </ul>
             <h4 style={noBottom}>Composer</h4>
             <h5 style={smallTop}>June 2011 to Present</h5>
             <ul>
