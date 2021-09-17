@@ -72,7 +72,7 @@ const Projects = () => {
                 </p>
             </section>
             <section className="project">
-                {getHeader('Piano Sight-Reading Web App', 'https://github.com/AceOfHeart5/WebMidiLearning', 'https://aceofheart5.github.io/WebMidiLearning/')}
+                {getHeader('Piano Sight-Reading Web App', 'https://github.com/AceOfHeart5/piano-sight-reading', 'https://aceofheart5.github.io/piano-sight-reading/')}
                 <img src={IMAGES.sitereadingapp} alt="pic of sheet music app"/>
                 <p>
                     Finding good material to practice sight-reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make 
