@@ -89,7 +89,7 @@ const Projects = () => {
                 </p>
             </section>
             <section className="project">
-                {getHeader('GameMaker Studio Project', 'https://github.com/AceOfHeart5/Altered-Platformer', 'https://gla55world.itch.io/the-evil-tower')}
+                {getHeader('GameMaker Studio Project', 'https://github.com/AceOfHeart5/evil-tower', 'https://gla55world.itch.io/the-evil-tower')}
                 <img src={IMAGES.eviltower.one} alt="pic of a video game" />
                 <p>
                     My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but 
