@@ -23,8 +23,8 @@ const About = () => {
             <h4 style={noBottom}>Software Engineering Intern</h4>
             <h5 style={smallTop}>co:census, June 2021 to September 2021</h5>
             <ul>
-                <li>Creates chatbots with Twilio Studio</li>
-                <li>Automates creation of Twilio Flows using Go</li>
+                <li>Created chatbots with Twilio Studio</li>
+                <li>Automated creation of Twilio Flows using Go</li>
                 <li>Created custom JSON format to represent sms surveys</li>
             </ul>
             <h4 style={noBottom}>Composer</h4>
