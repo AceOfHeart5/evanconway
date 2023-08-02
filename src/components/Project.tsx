@@ -3,18 +3,11 @@ interface ProjectProps {
     linkGithub?: string,
     linkProject?: string,
     images?: { imageLink: string, altText: string }[],
-    description: string,
+    description?: string,
+    children?: React.JSX.Element | React.JSX.Element[],
 }
 
-/*
-.project {
-	max-width: 1200px;
-	margin-bottom: 50px;
-	border-bottom: 4px solid gray;
-}
-*/
-
-const Project = ({ title, linkGithub, linkProject, images, description }: ProjectProps) => {
+const Project = ({ title, linkGithub, linkProject, images, description, children }: ProjectProps) => {
     return <section style={{
         maxWidth: "1200px",
         marginBottom: "50px",
@@ -26,7 +19,8 @@ const Project = ({ title, linkGithub, linkProject, images, description }: Projec
             { linkProject ? <a href={linkProject} className="link-project">Project</a> : null }
         </div>
         {images?.map(img => <img src={img.imageLink} alt={img.altText}/>)}
-        <p>{description}</p>
+        { description ? <p>{description}</p> : null }
+        {children}
     </section>
 };
 
