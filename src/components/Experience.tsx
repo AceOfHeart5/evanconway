@@ -20,8 +20,8 @@ const Experience = ({ title, company, start, end, activities }: ExperienceProps)
 
     return <>
         <h4 style={{ marginBottom: "0px" }}>{ title }</h4>
-        <h5 style={{ marginTop: "5px", marginBottom: 0 }}>{`${displayCompany} ${dateStart} to ${dateEnd}`}</h5>
-        <ul style={{ marginTop: "8px" }}>{activities.map(activity => <li>{activity}</li>)}</ul>
+        <h5 style={{ marginTop: "5px" }}>{`${displayCompany} ${dateStart} to ${dateEnd}`}</h5>
+        <ul>{activities.map(activity => <li>{activity}</li>)}</ul>
     </>;
 };
 
