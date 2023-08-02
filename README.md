@@ -1,3 +1,3 @@
 ### My Personal Website
 
-A place to show off things I've made. Updated periodically.
+A place to show off things I've made.
