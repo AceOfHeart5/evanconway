@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Navbar from './Navbar.js';
-import Projects from './Projects';
-import Blog from './Blog.js';
-import About from './About.js';
+import Navbar from './components/Navbar.js';
+import Projects from './components/Projects';
+import Blog from './components/Blog.js';
+import About from './components/About.js';
 
 function App() {
 	return (

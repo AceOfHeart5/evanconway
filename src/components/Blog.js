@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import BLOGS from './assets/blogs.js';
+import BLOGS from '../assets/blogs.js';
 const Blog = () => {
     const [viewing, setViewing] = useState("blog");
 
