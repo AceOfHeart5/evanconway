@@ -2,7 +2,7 @@ import IMAGES from '../assets/images.js';
 
 const Projects = () => {
 
-    const getHeader = (title, linkGithub = null, linkProject = null) => {
+    const getHeader = (title: string, linkGithub: string | null = null, linkProject: string | null = null) => {
         const result = [];
         result.push(<h2>{title}</h2>);
         if (linkGithub !== null) {
