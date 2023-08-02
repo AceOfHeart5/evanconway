@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const Navlink = ({ link, children, selected }) => {
+interface NavlinkProps {
+    link: string,
+    children: React.JSX.Element | React.JSX.Element[] | string,
+}
+
+const Navlink = ({ link, children }: NavlinkProps) => {
+    const location = useLocation();
 
     const getSelected = () => {
-        if (link === selected) return "selected";
+        if (location.pathname === ("/" + link)) return "selected";
         return null;
     }
 

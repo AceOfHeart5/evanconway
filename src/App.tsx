@@ -1,13 +1,11 @@
 import './App.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
-import Projects from './components/Projects';
-import Blog from './components/Blog.js';
-import About from './components/About.js';
+import Content from './components/Content.js';
 
 const App = () => {
 	return <div className="App">
-		<HashRouter basename="/">
+		<HashRouter>
 			<div className="topbar">
 				<h1 className="my-name"> 
 					Evan Conway
@@ -16,11 +14,7 @@ const App = () => {
 			</div>
 			<div className="contentwrapper">
 				<div className="contentborder">
-					<Routes>
-						<Route path="/projects"><Projects/></Route>
-						<Route path="/blog"><Blog/></Route>
-						<Route path="/"><About/></Route>
-					</Routes>
+					<Content/>
 				</div>
 			</div>
 		</HashRouter>
