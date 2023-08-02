@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
-import About from "./About";
-import Projects from "./Projects";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 const Content = () => {
     const location = useLocation();

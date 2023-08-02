@@ -1,5 +1,5 @@
-import IMAGES from '../assets/images.js';
-import Project from './Project.js';
+import IMAGES from '../../assets/images.js';
+import Project from '../Project.js';
 
 const Projects = () => {
     return <div>

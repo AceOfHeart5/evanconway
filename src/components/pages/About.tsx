@@ -1,4 +1,4 @@
-import Experience from "./Experience";
+import Experience from "../Experience";
 
 const About = () => {
     const noBottom = { marginBottom: "0px" };
