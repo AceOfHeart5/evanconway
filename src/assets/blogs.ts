@@ -1,5 +1,3 @@
-import IMAGES from './images';
-
 interface Blog {
     title: string,
     description: string,
