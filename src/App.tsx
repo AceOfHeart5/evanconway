@@ -7,13 +7,20 @@ const App = () => {
 	return <div className="App">
 		<HashRouter>
 			<div className="topbar">
-				<h1 className="my-name"> 
+				<h1 style={{ cursor: "default" }}> 
 					Evan Conway
 				</h1>
 				<Navbar/>
 			</div>
-			<div className="contentwrapper">
-				<div className="contentborder">
+			<div style={{
+				margin: "0px",
+				padding: "20px",
+			}}>
+				<div style={{
+					margin: "0px",
+					padding: "0px 20px",
+					border: "2px solid grey",
+				}}>
 					<Content/>
 				</div>
 			</div>

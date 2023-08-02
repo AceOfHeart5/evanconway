@@ -8,13 +8,16 @@ interface NavlinkProps {
 const Navlink = ({ link, children }: NavlinkProps) => {
     const location = useLocation();
 
-    const getSelected = () => {
-        if (location.pathname === ("/" + link)) return "selected";
-        return null;
-    }
+    const selected = location.pathname === ("/" + link);
 
     return ( 
-        <Link className={`nav ${getSelected()}`} to={"/" + link}>
+        <Link to={"/" + link} style={{
+            cursor: "pointer",
+            padding: "2px",
+            margin: "5px",
+            textDecoration: "none",            
+            borderBottom:`2px solid ${selected ? "white" : "transparent"}`,
+        }}>
             {children}
         </Link>
     );

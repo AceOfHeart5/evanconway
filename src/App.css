@@ -15,70 +15,20 @@ html {
 }
 
 /* base stylings*/
-.navbar {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	align-items: center;
-	justify-items: center;
-}
-.nav:hover {
-	cursor: pointer;
-}
-.nav {
-	padding: 2px;
-	margin: 5px;
-	text-decoration: none;
-}
-.nav.selected {
-	margin-bottom: 3px;
-	border-bottom: 2px solid white;
-}
-.contentwrapper {
-	margin: 0px;
-	padding: 20px;
-}
-.contentborder {
-	margin: 0px;
-	padding: 0px 20px;
-	border: 2px solid grey;
-}
-.bloglist{
-	padding: 0px;
-	margin: 0px;
-	padding-bottom: 0px;
-	list-style: none;
-}
-.bloglink {
-	text-decoration: none;
-}
-.bloglisting {
-	box-sizing: border-box;
-	padding: 5px;
-	margin-bottom: 30px;
-}
-.bloglisting:hover {
-	border-bottom: 2px solid white;
-	margin-bottom: 28px;
-	cursor: pointer;
-}
-.blogpost {
-	margin: 0px;
-	padding: 0px;
-	max-width: 1200px;
-}
 
-.blogback {
-	display: block;
-	width: 82px; /* Complete and total magic number*/
-	padding-bottom: 5px;
-	text-decoration: none;
-}
-.blogback:hover {
-	cursor: pointer;
-	border-bottom: 2px solid white;
-	padding-bottom: 3px;
-}
 /* assume phone style */
+.project {
+	max-width: 1200px;
+	margin-bottom: 50px;
+	border-bottom: 4px solid gray;
+}
+a:hover {
+	background-color: #333;
+}
+img {
+	width: 500px;
+	max-width: 100%;
+}
 .topbar {
 	display: grid;
 	grid-template-columns: 100%;
@@ -87,27 +37,6 @@ html {
 .topbar h1, .navbar {
 	border-bottom: 2px solid white;
 	padding: 10px;
-}
-.my-name {
-	
-}
-.my-name:hover {
-	cursor: default;
-}
-.project {
-	max-width: 1200px;
-	margin-bottom: 50px;
-	border-bottom: 4px solid gray;
-}
-.project a.projectlink{
-	font-size: 1.7em;
-}
-a:hover {
-	background-color: #333;
-}
-img {
-	width: 500px;
-	max-width: 100%;
 }
 @media screen and (min-width: 700px) {
 	img {
