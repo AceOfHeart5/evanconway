@@ -15,16 +15,18 @@ import guestbook from './guestbook.png';
 import topDownAdventure from './topdownadventure.png';
 import dialogSceneCode from './DialogScene_Code.png';
 import dialogSceneExample from './DialogScene_Example.gif';
+import scoreApp01 from './scoreapp01.png';
+import scoreApp02 from './scoreapp02.png';
 
 const IMAGES = {
     eviltower: {
         one: eviltower01,
-        two: eviltower02
+        two: eviltower02,
     },
     discordbot: {
         command: botcommand,
         demonstrate: botdemonstrate,
-        uparrow: uparrow
+        uparrow: uparrow,
     },
     text: {
         code: textcode,
@@ -32,7 +34,7 @@ const IMAGES = {
         combine: textcombine,
         typing: texttyping,
         matrix: textmatrix,
-        fade: textfade
+        fade: textfade,
     },
     sitereadingapp: sitereadingapp,
     timemanager: timemanager,
@@ -40,8 +42,12 @@ const IMAGES = {
     topDownAdventure: topDownAdventure,
     dialogScene: {
         code: dialogSceneCode,
-        example: dialogSceneExample
-    }
+        example: dialogSceneExample,
+    },
+    scoreApp: {
+        one: scoreApp01,
+        two: scoreApp02,
+    },
 };
 
 export default IMAGES;

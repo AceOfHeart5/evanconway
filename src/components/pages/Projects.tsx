@@ -9,6 +9,16 @@ const Projects = () => {
             }}>Link To Github</a>
         </section>
         <Project
+            title="Score Keeping Web App"
+            linkGithub="https://github.com/AceOfHeart5/game-life-tracker"
+            linkProject="https://aceofheart5.github.io/game-life-tracker/"
+            images={[
+                { imageLink: IMAGES.scoreApp.one, altText: "Screen shot of score keeping app." },
+                { imageLink: IMAGES.scoreApp.two, altText: "Screen shot of options modal in score keeping app." },
+            ]}
+            description="For tabletop games I've noticed people have started using apps on their phone to keep track of scores or life totals. As a way to practice my React, Redux and CSS skills, I decided to make my own version."
+        />
+        <Project
             title="Dialog Tree"
             linkGithub="https://github.com/AceOfHeart5/DialogScene"
             linkProject="https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0"
@@ -27,7 +37,8 @@ const Projects = () => {
             ]}
             description="A simple guestbook app. Made with React, Express, and Postgres hosted on Digital Ocean."
         />
-        <Project
+        {/* this project is old and lame, but we'll leave it here commented out */}
+        {/* <Project
             title="Time Manager"
             linkGithub="https://github.com/AceOfHeart5/TimeManager"
             linkProject="https://time-manager-hhvqs.ondigitalocean.app/"
@@ -35,7 +46,7 @@ const Projects = () => {
                 { imageLink: IMAGES.timemanager, altText: "time manager app" },
             ]}
             description="A time management app to keep track of time spent on tasks. Made with React."
-        />
+        /> */}
         <Project
             title="Text Boxes"
             linkGithub="https://github.com/AceOfHeart5/Text_Boxes"
