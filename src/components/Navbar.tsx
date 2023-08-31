@@ -8,13 +8,8 @@ const Navbar = () => {
     }}>
         <Navlink link="">Home</Navlink>
         <Navlink link="projects">Projects</Navlink>
-        <a href="https://github.com/AceOfHeart5">
-        <img
-            alt="GitHub Logo"
-            style={{
-                width: "32px",
-            }}
-            src={githubLogo}/>
+        <a style={{ width: "32px", height: "32px", }} href="https://github.com/AceOfHeart5">
+            <img alt="GitHub Logo" src={githubLogo}/>
         </a>
     </div>;
 }
