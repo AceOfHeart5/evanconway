@@ -7,7 +7,7 @@ const Navbar = () => {
         alignItems: "center",
         justifyItems: "center",
     }}>
-        <Navlink link="">About</Navlink>
+        <Navlink link="">Home</Navlink>
         <Navlink link="projects">Projects</Navlink>
     </div>;
 }
