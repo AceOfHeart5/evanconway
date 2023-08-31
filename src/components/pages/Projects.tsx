@@ -3,11 +3,6 @@ import Project from '../Project.js';
 
 const Projects = () => {
     return <div>
-        <section style={{ paddingBottom: "10px" }} className="project">
-            <a href="https://github.com/AceOfHeart5?tab=repositories" style={{
-                fontSize: "1.7em",
-            }}>Link To Github</a>
-        </section>
         <Project
             title="Score Keeping Web App"
             linkGithub="https://github.com/AceOfHeart5/game-life-tracker"

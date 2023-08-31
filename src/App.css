@@ -2,13 +2,13 @@
 	color: white;
 	background: #222222;
 	min-height: 100vh;
+	padding: 24px;
 }
 .App * {
 	color: white;
 }
 /* 
 This forces scroll bar to always exist. 
-Helps prevent change in site width when clicking "Blog". 
 */
 html {
 	overflow-y: scroll;
@@ -29,24 +29,9 @@ img {
 	width: 500px;
 	max-width: 100%;
 }
-.topbar {
-	display: grid;
-	grid-template-columns: 100%;
-	margin-bottom: 10px;
-}
-.topbar h1, .navbar {
-	border-bottom: 2px solid white;
-	padding: 10px;
-}
+
 @media screen and (min-width: 700px) {
 	img {
 		margin: 0px 20px;
-	}
-	.topbar {
-		grid-template-columns: 50% 50%;
-		border-bottom: 2px solid white;
-	}
-	.topbar h1, .navbar {
-		border: none;
 	}
 }

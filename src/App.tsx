@@ -6,23 +6,20 @@ import Content from './components/Content.js';
 const App = () => {
 	return <div className="App">
 		<HashRouter>
-			<div className="topbar">
-				<h1 style={{ cursor: "default" }}> 
-					Evan Conway
-				</h1>
+			<div style={{
+				display: "flex",
+				justifyContent: "space-between",
+				alignItems: "center",
+			}}>
+				<h1 style={{ cursor: "default", padding: " 0 0 24px 0", margin: 0 }}>Evan Conway</h1>
 				<Navbar/>
 			</div>
 			<div style={{
 				margin: "0px",
-				padding: "20px",
+				padding: "0px 20px",
+				border: "2px solid grey",
 			}}>
-				<div style={{
-					margin: "0px",
-					padding: "0px 20px",
-					border: "2px solid grey",
-				}}>
-					<Content/>
-				</div>
+				<Content/>
 			</div>
 		</HashRouter>
 	</div>;
