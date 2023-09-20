@@ -1,8 +1,9 @@
 import IMAGES from '../../assets/images.js';
 import Project from '../Project.js';
+import { Container, Typography, Link } from '@mui/material';
 
 const Projects = () => {
-    return <div>
+    return <Container>
         <Project
             title="Score Keeping Web App"
             linkGithub="https://github.com/AceOfHeart5/game-life-tracker"
@@ -32,16 +33,6 @@ const Projects = () => {
             ]}
             description="A simple guestbook app. Made with React, Express, and Postgres hosted on Digital Ocean."
         />
-        {/* this project is old and lame, but we'll leave it here commented out */}
-        {/* <Project
-            title="Time Manager"
-            linkGithub="https://github.com/AceOfHeart5/TimeManager"
-            linkProject="https://time-manager-hhvqs.ondigitalocean.app/"
-            images={[
-                { imageLink: IMAGES.timemanager, altText: "time manager app" },
-            ]}
-            description="A time management app to keep track of time spent on tasks. Made with React."
-        /> */}
         <Project
             title="Text Boxes"
             linkGithub="https://github.com/AceOfHeart5/Text_Boxes"
@@ -109,17 +100,17 @@ const Projects = () => {
             title="Music"
             linkProject="https://www.universalproductionmusic.com/en-us/search?q=evan%20conway&qtext=evan%20conway&vtag=0&vwave=0&vdesc=1&ktype=6"
         >
-            <p>
+            <Typography>
                 Over 250 piese of music written for TV, radio, and various media. Each song is part of an album, and each album fits a 
-                specific theme or mood. Some of my favorites are <a href="http://links.universalproductionmusic.com/CnDcyu">Beautiful Entanglement</a>, <a href="http://links.universalproductionmusic.com/nfgSlm">Nuts And Bolts</a>, <a href="http://links.universalproductionmusic.com/T23gTi">Glorious Dawn</a>, and <a href="http://links.universalproductionmusic.com/sU9fpv">Adorable Saves The Day</a>.
-            </p>
+                specific theme or mood. Some of my favorites are <Link href="http://links.universalproductionmusic.com/CnDcyu">Beautiful Entanglement</Link>, <Link href="http://links.universalproductionmusic.com/nfgSlm">Nuts And Bolts</Link>, <Link href="http://links.universalproductionmusic.com/T23gTi">Glorious Dawn</Link>, and <Link href="http://links.universalproductionmusic.com/sU9fpv">Adorable Saves The Day</Link>.
+            </Typography>
         </Project>
         <Project
             title="This Website"
             linkGithub="https://github.com/AceOfHeart5/AceOfHeart5.github.io"
             description="This site was made with React. Honestly React is waaaaaaay overkill for this, but I wanted more experience with React, and what better way to accomplish that than to make something?"
         />
-    </div>;
+    </Container>;
 }
 
 export default Projects;

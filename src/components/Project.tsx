@@ -1,3 +1,5 @@
+import { Paper, Typography, Stack, Link } from '@mui/material';
+
 interface ProjectProps {
     title: string,
     linkGithub?: string,
@@ -8,20 +10,20 @@ interface ProjectProps {
 }
 
 const Project = ({ title, linkGithub, linkProject, images, description, children }: ProjectProps) => {
-    return <section style={{
-        maxWidth: "1200px",
-        marginBottom: "50px",
-        borderBottom: "4px solid gray",
-    }}>
-        <div style={{paddingBottom: '15px'}}>
-            <h2>{title}</h2>
-            { linkGithub ? <a href={linkGithub} className="link-github" style={{paddingRight: '10px'}}>Github</a> : null }
-            { linkProject ? <a href={linkProject} className="link-project">Project</a> : null }
-        </div>
-        {images?.map(img => <img src={img.imageLink} alt={img.altText}/>)}
-        { description ? <p>{description}</p> : null }
-        {children}
-    </section>
+    return (
+        <Paper>
+            <Typography variant='h4'>{title}</Typography>
+            <Stack direction="row">
+                { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
+                { linkProject ? <Link href={linkProject}>Project</Link> : null }
+            </Stack>
+            <Stack>
+                {images?.map(img => <img src={img.imageLink} alt={img.altText} style={{ maxWidth: "100%" }}/>)}
+            </Stack>
+            { description ? <Typography>{description}</Typography> : null }
+            {children}
+        </Paper>
+    );
 };
 
 export default Project;
