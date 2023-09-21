@@ -1,6 +1,6 @@
 import IMAGES from '../../assets/images.js';
 import Project from '../Project.js';
-import { Container, Typography, Link, List, ListItem, Stack } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 const Projects = () => {
     return <Container>
@@ -13,7 +13,7 @@ const Projects = () => {
                     { imageLink: IMAGES.scoreApp.one, altText: "Screen shot of score keeping app." },
                     { imageLink: IMAGES.scoreApp.two, altText: "Screen shot of options modal in score keeping app." },
                 ]}
-                description="For tabletop games I've noticed people have started using apps on their phone to keep track of scores or life totals. As a way to practice my React, Redux and CSS skills, I decided to make my own version."
+                markdownFileName="scorekeeper"
             />
             <Project
                 title="Dialog Tree"
@@ -23,7 +23,7 @@ const Projects = () => {
                     { imageLink: IMAGES.dialogScene.code, altText: "dialog scene code" },
                     { imageLink: IMAGES.dialogScene.example, altText: "dialog scene example" },
                 ]}
-                description="Making dialog trees in games is hard. This is one of my first attempts at making a system that makes it easy to create dialog right in the code."
+                markdownFileName="dialogtree"
             />
             <Project
                 title="Guestbook"
@@ -32,7 +32,7 @@ const Projects = () => {
                 images={[
                     { imageLink: IMAGES.guestbook, altText: "guestbook app" },
                 ]}
-                description="A simple guestbook app. Made with React, Express, and Postgres hosted on Digital Ocean."
+                markdownFileName="guestbook"
             />
             <Project
                 title="Text Boxes"
@@ -43,7 +43,7 @@ const Projects = () => {
                     { imageLink: IMAGES.text.combine, altText: "Combined text effects with typing." },
                     { imageLink: IMAGES.text.typing, altText: "Special typing effects." },
                 ]}
-                description="A key part of any video game is text boxes. When I'm working on a project, I often find myself wanting to draw text with a single word highlighted a different color or maybe floating in place. This isn't that hard to do, but it's cumbersome to have to do it over again for each project. I also wanted to display text that could type out still have added special effects. So I made a special collection of classes and functions to give text interesting effects."
+                markdownFileName="textboxes"
             />
             <Project
                 title="Discord Bot"
@@ -53,7 +53,7 @@ const Projects = () => {
                     { imageLink: IMAGES.discordbot.command, altText: "Programming a discord bot." },
                     { imageLink: IMAGES.discordbot.demonstrate, altText: "Bot performing its program." },
                 ]}
-                description={`I was inspired to make this bot after a friend made a Beetlejuice reference on a private server as a joke to "summon" us. It also converts messages containing only '^' into up arrow reactions on the previous message. Its main feature, though, is programmable responses. If a user sends a message with the syntax "Hey bot! When I say 'call' you say 'response'", the bot will respond with "response" anytime someone messages the "call".`}
+                markdownFileName={`discordbot`}
             />
             <Project
                 title="Piano Sight-Reading Web App"
@@ -62,7 +62,7 @@ const Projects = () => {
                 images={[
                     { imageLink: IMAGES.sitereadingapp, altText: "Screen shot of piano sight-reading app." },
                 ]}
-                description="Finding good material to practice sight-reading is difficult. The music can't be too hard or easy, and you need a lot of music to read through in order to make any real improvement. In the past I've used typing test programs to improve my typing speed, so I thought I'd make something similar, but for sight reading. The app randomly generates sheet music according to options set by the user. When run in a supported browser (just Google Chrome right now), the app can detect MIDI input from an electric piano. The green-highlighted note cursor only advances once the correct notes have been played."
+                markdownFileName="sightreading"
             />
             <Project
                 title="GameMaker Studio Prototype"
@@ -71,7 +71,7 @@ const Projects = () => {
                 images={[
                     { imageLink: IMAGES.topDownAdventure, altText: "Top down adventure game prototype." },
                 ]}
-                description="This project was about exploring GameMaker in further depth. I spent most of my time with this project making a modular state system."
+                markdownFileName="topdown"
             />
             <Project
                 title="GameMaker Studio Game"
@@ -81,35 +81,12 @@ const Projects = () => {
                     { imageLink: IMAGES.eviltower.one, altText: "Screenshot of GameMaker game." },
                     { imageLink: IMAGES.eviltower.two, altText: "Screenshot of GameMaker game." },
                 ]}
-                description="My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but it does have most of the features anyone would expect from a modern indie game:"
-            >
-                <List>
-                    <ListItem>sprites with animations</ListItem>
-                    <ListItem>attacking and blocking mechanics</ListItem>
-                    <ListItem>hitstun</ListItem>
-                    <ListItem>keyboard and controller support</ListItem>
-                    <ListItem>rebindable controls</ListItem>
-                    <ListItem>sound effects</ListItem>
-                    <ListItem>music</ListItem>
-                    <ListItem>options menu for changing settings</ListItem>
-                    <ListItem>cutscenes</ListItem>
-                    <ListItem>character interactions</ListItem>
-                    <ListItem>text boxes with typing effects</ListItem>
-                </List>
-            </Project>
+                markdownFileName="eviltower"
+            />
             <Project
                 title="Music"
                 linkProject="https://www.universalproductionmusic.com/en-us/search?q=evan%20conway&qtext=evan%20conway&vtag=0&vwave=0&vdesc=1&ktype=6"
-            >
-                <Typography>
-                    Over 250 piese of music written for TV, radio, and various media. Each song is part of an album, and each album fits a 
-                    specific theme or mood. Some of my favorites are <Link href="http://links.universalproductionmusic.com/CnDcyu">Beautiful Entanglement</Link>, <Link href="http://links.universalproductionmusic.com/nfgSlm">Nuts And Bolts</Link>, <Link href="http://links.universalproductionmusic.com/T23gTi">Glorious Dawn</Link>, and <Link href="http://links.universalproductionmusic.com/sU9fpv">Adorable Saves The Day</Link>.
-                </Typography>
-            </Project>
-            <Project
-                title="This Website"
-                linkGithub="https://github.com/AceOfHeart5/AceOfHeart5.github.io"
-                description="This site was made with React. Honestly React is waaaaaaay overkill for this, but I wanted more experience with React, and what better way to accomplish that than to make something?"
+                markdownFileName="music"
             />
         </Stack>
     </Container>;

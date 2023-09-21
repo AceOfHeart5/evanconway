@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import Markdown from 'markdown-to-jsx';
 import { Card, CardContent, Typography, Stack, Link, ImageList, ImageListItem } from '@mui/material';
 
 interface ProjectProps {
@@ -5,26 +7,37 @@ interface ProjectProps {
     linkGithub?: string,
     linkProject?: string,
     images?: { imageLink: string, altText: string }[],
-    description?: string,
-    children?: React.JSX.Element | React.JSX.Element[],
+    markdownFileName?: string,
 }
 
-const Project = ({ title, linkGithub, linkProject, images, description, children }: ProjectProps) => {
+const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: ProjectProps) => {
+    const [markdown, setMarkdown] = useState("");
+
+    useEffect(() => {
+        const setupMarkdown = async () => {
+            const res = await fetch(`src/content/projects/${markdownFileName}.md`);
+            const text = await res.text();
+            setMarkdown(text);
+        };
+        setupMarkdown();
+    }, [markdownFileName]);
+
     return (
-        <Card><CardContent>
-            <Typography variant='h4'>{title}</Typography>
-            <Stack direction="row">
-                { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
-                { linkProject ? <Link href={linkProject}>Project</Link> : null }
-            </Stack>
-            { images === undefined ? null : <ImageList>
-                {images.map(img => <ImageListItem>
-                    <img src={img.imageLink} alt={img.altText}/>
-                </ImageListItem>)}
-            </ImageList> }
-            { description ? <Typography>{description}</Typography> : null }
-            {children}
-        </CardContent></Card>
+        <Card>
+            <CardContent>
+                <Typography variant='h4'>{title}</Typography>
+                <Stack direction="row">
+                    { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
+                    { linkProject ? <Link href={linkProject}>Project</Link> : null }
+                </Stack>
+                { images === undefined ? null : <ImageList>
+                    {images.map((img, i) => <ImageListItem key={i}>
+                        <img src={img.imageLink} alt={img.altText}/>
+                    </ImageListItem>)}
+                </ImageList> }
+                <Markdown>{markdown}</Markdown>
+            </CardContent>
+        </Card>
     );
 };
 
