@@ -6,7 +6,10 @@ import { Container, Stack, Typography, createTheme, ThemeProvider, CssBaseline }
 const App = () => {
 	const theme = createTheme({
 		palette: {
-			mode: "light",
+			mode: "dark",
+			background: {
+				default: "#222"
+			}
 		},
 		components: {
 			MuiStack: {
