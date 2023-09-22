@@ -1,4 +1,3 @@
-import './App.css';
 import { HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
 import Content from './components/Content.js';
@@ -6,6 +5,9 @@ import { Container, Stack, Typography, createTheme, ThemeProvider, CssBaseline }
 
 const App = () => {
 	const theme = createTheme({
+		palette: {
+			mode: "dark",
+		},
 		components: {
 			MuiStack: {
 				defaultProps: {
