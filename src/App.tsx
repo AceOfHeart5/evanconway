@@ -16,9 +16,15 @@ const App = () => {
 			},
 			MuiButton: {
 				defaultProps: {
-					variant: "outlined",
+					variant: "text",
 				}
-			}
+			},
+			MuiCard: {
+				defaultProps: {
+					variant: "elevation",
+					elevation: 5,
+				},
+			},
 		},
 	});
 
@@ -31,9 +37,6 @@ const App = () => {
 						direction="row"
 						justifyContent="space-between"
 						alignItems="center"
-						paddingBottom={1}
-						borderBottom={1}
-						borderColor={"divider"}
 						marginBottom={2}
 					>
 						<Typography variant="h2">Evan Conway</Typography>
