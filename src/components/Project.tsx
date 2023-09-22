@@ -27,7 +27,7 @@ const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: P
             <Card sx={{ height: "100%" }}>
                 <CardContent>
                     <Typography variant='h5'>{title}</Typography>
-                    <Markdown>{markdown}</Markdown>
+                    {/* <Markdown>{markdown}</Markdown> */}
                     { images === undefined ? null : <ImageList>
                         {images.map((img, i) => <ImageListItem key={i}>
                             <img src={img.imageLink} alt={img.altText}/>
