@@ -1,12 +1,1 @@
-My goal in creating this game was to uncover all the unexpected challenges involved in making a complete game. The content of this game is minimal, but it does have most of the features anyone would expect from a modern indie game:
-- sprites with animations
-- attacking and blocking mechanics
-- hitstun
-- keyboard and controller support
-- rebindable controls
-- sound effects
-- music
-- options menu for changing settings
-- cutscenes
-- character interactions
-- text boxes with typing effects
+Feature complete GameMaker prototype.

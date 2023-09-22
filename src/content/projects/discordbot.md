@@ -1,1 +1,1 @@
-I was inspired to make this bot after a friend made a Beetlejuice reference on a private server as a joke to "summon" us. It also converts messages containing only '^' into up arrow reactions on the previous message. Its main feature, though, is programmable responses. If a user sends a message with the syntax "Hey bot! When I say 'call' you say 'response'", the bot will respond with "response" anytime someone messages the "call".
+Discord bot with programmable responses.

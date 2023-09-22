@@ -1,1 +1,1 @@
-For tabletop games I've noticed people have started using apps on their phone to keep track of scores or life totals. As a way to practice my React, Redux and CSS skills, I decided to make my own version.
+Scorekeeping app for tabletop games.
