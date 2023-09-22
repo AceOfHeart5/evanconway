@@ -16,9 +16,9 @@ const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: P
     useEffect(() => {
         const setupMarkdown = async () => {
             try {
-            const res = await fetch(`src/content/projects/${markdownFileName}.md`);
-            const text = await res.text();
-            setMarkdown(text);
+                const res = await fetch(`src/content/projects/${markdownFileName}.md`);
+                const text = await res.text();
+                setMarkdown(text);
             } catch (e) {
                 console.log(`project markdown error: ${e}`);
             }
