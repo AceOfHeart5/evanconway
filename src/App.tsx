@@ -12,6 +12,11 @@ const App = () => {
 					spacing: 1,
 				},
 			},
+			MuiButton: {
+				defaultProps: {
+					variant: "outlined",
+				}
+			}
 		},
 	});
 
