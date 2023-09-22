@@ -26,7 +26,7 @@ const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: P
         <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%" }}>
                 <CardContent>
-                    <Typography variant='h4'>{title}</Typography>
+                    <Typography variant='h5'>{title}</Typography>
                     <Markdown>{markdown}</Markdown>
                     { images === undefined ? null : <ImageList>
                         {images.map((img, i) => <ImageListItem key={i}>
