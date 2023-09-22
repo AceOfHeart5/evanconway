@@ -1,10 +1,10 @@
 import IMAGES from '../../assets/images.js';
 import Project from '../Project.js';
-import { Container, Stack } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 
 const Projects = () => {
     return <Container>
-        <Stack spacing={4}>
+        <Grid container spacing={3} justifyContent={"center"}>
             <Project
                 title="Score Keeping Web App"
                 linkGithub="https://github.com/AceOfHeart5/game-life-tracker"
@@ -88,7 +88,7 @@ const Projects = () => {
                 linkProject="https://www.universalproductionmusic.com/en-us/search?q=evan%20conway&qtext=evan%20conway&vtag=0&vwave=0&vdesc=1&ktype=6"
                 markdownFileName="music"
             />
-        </Stack>
+        </Grid>
     </Container>;
 }
 

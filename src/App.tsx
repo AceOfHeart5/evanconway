@@ -6,7 +6,7 @@ import { Container, Stack, Typography, createTheme, ThemeProvider, CssBaseline }
 const App = () => {
 	const theme = createTheme({
 		palette: {
-			mode: "dark",
+			mode: "light",
 		},
 		components: {
 			MuiStack: {
@@ -34,7 +34,7 @@ const App = () => {
 				<CssBaseline/>
 				<Container>
 					<Stack
-						direction="row"
+						direction={{ xs: 'column', sm: 'row' }}
 						justifyContent="space-between"
 						alignItems="center"
 						marginBottom={2}
