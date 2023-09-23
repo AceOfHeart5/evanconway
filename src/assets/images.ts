@@ -17,6 +17,10 @@ import dialogSceneCode from './DialogScene_Code.png';
 import dialogSceneExample from './DialogScene_Example.gif';
 import scoreApp01 from './scoreapp01.png';
 import scoreApp02 from './scoreapp02.png';
+import pixelmoveGood from './Pixel Move Good.png';
+import pixelmoveBad from './Pixel Move Bad.png';
+import stairstep from './pixelmove_stairsteps.gif';
+import stairstepFixed from './pixelmove_fixed_movement.gif';
 
 const IMAGES = {
     eviltower: {
@@ -48,6 +52,12 @@ const IMAGES = {
         one: scoreApp01,
         two: scoreApp02,
     },
+    pixelmove: {
+        bad: pixelmoveBad,
+        good: pixelmoveGood,
+        exampleBad: stairstep,
+        exampleGood: stairstepFixed,
+    }
 };
 
 export default IMAGES;

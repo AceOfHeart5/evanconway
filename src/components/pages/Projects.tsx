@@ -6,6 +6,18 @@ const Projects = () => {
     return <Container>
         <Grid container spacing={3} justifyContent={"center"}>
             <Project
+                title='PixelMove'
+                linkGithub='https://github.com/AceOfHeart5/pixelmove'
+                linkProject='https://gla55world.itch.io/pixelmove-demo'
+                images={[
+                    { imageLink: IMAGES.pixelmove.bad, altText: 'Traced line of bad movement.'},
+                    { imageLink: IMAGES.pixelmove.good, altText: 'Traced line of good movement.'},
+                    { imageLink: IMAGES.pixelmove.exampleBad, altText: 'Screen shot of bad pixel movement.'},
+                    { imageLink: IMAGES.pixelmove.exampleGood, altText: 'Screen shot of fixed pixel movement.'},
+                ]}
+                markdownFileName='pixelmove'
+            />
+            <Project
                 title="Score Keeping Web App"
                 linkGithub="https://github.com/AceOfHeart5/game-life-tracker"
                 linkProject="https://aceofheart5.github.io/game-life-tracker/"
