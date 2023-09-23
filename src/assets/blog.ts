@@ -5,7 +5,7 @@ interface BlogPost {
     contentPath: string,
 }
 
-const getContentPath = (fileName: string) => `/src/assets/blog_posts/${fileName}.md`;
+// const getContentPath = (fileName: string) => `/src/assets/blog_posts/${fileName}.md`;
 
 // const example: BlogPost[] = [
 //     {
