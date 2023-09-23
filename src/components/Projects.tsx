@@ -5,7 +5,8 @@ import PROJECTS from '../assets/projects.js';
 const Projects = () => {
     return <Container>
         <Grid container spacing={3} justifyContent={"center"}>
-            { PROJECTS.map(p => <Project 
+            { PROJECTS.map(p => <Project
+                key={p.title}
                 title={p.title}
                 linkGithub={p.linkGithub}
                 linkProject={p.linkProject}
