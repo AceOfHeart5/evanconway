@@ -1,5 +1,6 @@
-import Markdown from 'markdown-to-jsx';
-import { Grid, Card, CardContent, Typography, Stack, Link, ImageList, ImageListItem } from '@mui/material';
+import { Grid, Card, CardContent, Link, ImageList, ImageListItem, CardHeader, CardActions } from '@mui/material';
+import Markdown from './Markdown';
+
 
 interface ProjectProps {
     title: string,
@@ -12,20 +13,20 @@ interface ProjectProps {
 const Project = ({ title, linkGithub, linkProject, images=[], markdownDescription }: ProjectProps) => {
     return (
         <Grid item xs={12} md={6} lg={4}>
-            <Card sx={{ height: "100%" }}>
+            <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+                <CardHeader title={title}/>
                 <CardContent>
-                    <Typography variant='h5'>{title}</Typography>
                     <Markdown>{markdownDescription}</Markdown>
                     <ImageList>
                         {images.map((img, i) => <ImageListItem key={i}>
                             <img src={img.imageLink} alt={img.altText}/>
                         </ImageListItem>)}
                     </ImageList>
-                    <Stack direction="row">
-                        { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
-                        { linkProject ? <Link href={linkProject}>View</Link> : null }
-                    </Stack>
                 </CardContent>
+                <CardActions sx={{ marginTop: "auto" }}>
+                    { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
+                    { linkProject ? <Link href={linkProject}>View</Link> : null }
+                </CardActions>
             </Card>
         </Grid>
     );
