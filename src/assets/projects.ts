@@ -1,5 +1,26 @@
-import IMAGES from "./images";
+// project images
+import eviltower01 from './project_images/eviltower01.png';
+import eviltower02 from './project_images/eviltower02.png';
+import botcommand from './project_images/botcommand.gif';
+import botdemonstrate from './project_images/botdemonstrate.gif';
+import uparrow from './project_images/uparrow.gif';
+import sitereadingapp from './project_images/sitereadingapp.png';
+import textcode from './project_images/textcode.png';
+import textcolors from './project_images/textcolors.gif';
+import textcombine from './project_images/textcombine.gif';
+import texttyping from './project_images/texttyping.gif';
+import guestbookScreenshot from './project_images/guestbook.png';
+import topDownAdventure from './project_images/topdownadventure.png';
+import dialogSceneCode from './project_images/DialogScene_Code.png';
+import dialogSceneExample from './project_images/DialogScene_Example.gif';
+import scoreApp01 from './project_images/scoreapp01.png';
+import scoreApp02 from './project_images/scoreapp02.png';
+import pixelmoveGood from './project_images/Pixel Move Good.png';
+import pixelmoveBad from './project_images/Pixel Move Bad.png';
+import stairstep from './project_images/pixelmove_stairsteps.gif';
+import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
 
+// project descriptions
 import dialogtree from "./project_descriptions/dialogtree.md";
 import discordbot from './project_descriptions/discordbot.md';
 import eviltower from './project_descriptions/eviltower.md';
@@ -25,10 +46,10 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/pixelmove",
         linkProject: "https://gla55world.itch.io/pixelmove-demo",
         images: [
-            { imageLink: IMAGES.pixelmove.bad, altText: "Traced line of bad movement." },
-            { imageLink: IMAGES.pixelmove.good, altText: "Traced line of good movement." },
-            { imageLink: IMAGES.pixelmove.exampleBad, altText: "Screen shot of bad pixel movement." },
-            { imageLink: IMAGES.pixelmove.exampleGood, altText: "Screen shot of fixed pixel movement." },
+            { imageLink: pixelmoveBad, altText: "Traced line of bad movement." },
+            { imageLink: pixelmoveGood, altText: "Traced line of good movement." },
+            { imageLink: stairstep, altText: "Screen shot of bad pixel movement." },
+            { imageLink: stairstepFixed, altText: "Screen shot of fixed pixel movement." },
         ],
         markdownDescriptionPath: pixelmove,
     },
@@ -37,8 +58,8 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/game-life-tracker",
         linkProject: "https://aceofheart5.github.io/game-life-tracker/",
         images: [
-            { imageLink: IMAGES.scoreApp.one, altText: "Screen shot of score keeping app." },
-            { imageLink: IMAGES.scoreApp.two, altText: "Screen shot of options modal in score keeping app." },
+            { imageLink: scoreApp01, altText: "Screen shot of score keeping app." },
+            { imageLink: scoreApp02, altText: "Screen shot of options modal in score keeping app." },
         ],
         markdownDescriptionPath: scorekeeper,
     },
@@ -47,8 +68,8 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/DialogScene",
         linkProject: "https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0",
         images: [
-            { imageLink: IMAGES.dialogScene.code, altText: "dialog scene code" },
-            { imageLink: IMAGES.dialogScene.example, altText: "dialog scene example" },
+            { imageLink: dialogSceneCode, altText: "dialog scene code" },
+            { imageLink: dialogSceneExample, altText: "dialog scene example" },
         ],
         markdownDescriptionPath: dialogtree,
     },
@@ -57,7 +78,7 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/guestbook-backend",
         linkProject: "https://guestbook-l5nnz.ondigitalocean.app/",
         images: [
-            { imageLink: IMAGES.guestbook, altText: "guestbook app" },
+            { imageLink: guestbookScreenshot, altText: "guestbook app" },
         ],
         markdownDescriptionPath: guestbook,
     },
@@ -65,10 +86,10 @@ const PROJECTS: Project[] = [
         title: "Text Boxes",
         linkGithub: "https://github.com/AceOfHeart5/Text_Boxes",
         images: [
-            { imageLink: IMAGES.text.code, altText: "Code for colored text." },
-            { imageLink: IMAGES.text.colors, altText: "Colored text." },
-            { imageLink: IMAGES.text.combine, altText: "Combined text effects with typing." },
-            { imageLink: IMAGES.text.typing, altText: "Special typing effects." },
+            { imageLink: textcode, altText: "Code for colored text." },
+            { imageLink: textcolors, altText: "Colored text." },
+            { imageLink: textcombine, altText: "Combined text effects with typing." },
+            { imageLink: texttyping, altText: "Special typing effects." },
         ],
         markdownDescriptionPath: textboxes,
     },
@@ -76,9 +97,9 @@ const PROJECTS: Project[] = [
         title: "Discord Bot",
         linkGithub: "https://github.com/AceOfHeart5/Meme-Machine-discord-bot",
         images: [
-            { imageLink: IMAGES.discordbot.uparrow, altText: "Up arrow reaction." },
-            { imageLink: IMAGES.discordbot.command, altText: "Programming a discord bot." },
-            { imageLink: IMAGES.discordbot.demonstrate, altText: "Bot performing its program." },
+            { imageLink: uparrow, altText: "Up arrow reaction." },
+            { imageLink: botcommand, altText: "Programming a discord bot." },
+            { imageLink: botdemonstrate, altText: "Bot performing its program." },
         ],
         markdownDescriptionPath: discordbot,
     },
@@ -87,7 +108,7 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/piano-sight-reading",
         linkProject: "https://aceofheart5.github.io/piano-sight-reading/",
         images: [
-            { imageLink: IMAGES.sitereadingapp, altText: "Screen shot of piano sight-reading app." },
+            { imageLink: sitereadingapp, altText: "Screen shot of piano sight-reading app." },
         ],
         markdownDescriptionPath: sightreading,
     },
@@ -96,7 +117,7 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/TopDownAdventure/tree/2.3update",
         linkProject: "https://gla55world.itch.io/top-down-adventure",
         images: [
-            { imageLink: IMAGES.topDownAdventure, altText: "Top down adventure game prototype." },
+            { imageLink: topDownAdventure, altText: "Top down adventure game prototype." },
         ],
         markdownDescriptionPath: topdown,
     },
@@ -105,8 +126,8 @@ const PROJECTS: Project[] = [
         linkGithub: "https://github.com/AceOfHeart5/evil-tower",
         linkProject: "https://gla55world.itch.io/the-evil-tower",
         images: [
-            { imageLink: IMAGES.eviltower.one, altText: "Screenshot of GameMaker game." },
-            { imageLink: IMAGES.eviltower.two, altText: "Screenshot of GameMaker game." },
+            { imageLink: eviltower01, altText: "Screenshot of GameMaker game." },
+            { imageLink: eviltower02, altText: "Screenshot of GameMaker game." },
         ],
         markdownDescriptionPath: eviltower,
     },

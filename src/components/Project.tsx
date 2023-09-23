@@ -10,7 +10,7 @@ interface ProjectProps {
     markdownDescriptionPath?: string,
 }
 
-const Project = ({ title, linkGithub, linkProject, images, markdownDescriptionPath }: ProjectProps) => {
+const Project = ({ title, linkGithub, linkProject, images=[], markdownDescriptionPath }: ProjectProps) => {
     const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
@@ -34,11 +34,11 @@ const Project = ({ title, linkGithub, linkProject, images, markdownDescriptionPa
                 <CardContent>
                     <Typography variant='h5'>{title}</Typography>
                     <Markdown>{markdown}</Markdown>
-                    { images === undefined ? null : <ImageList>
+                    <ImageList>
                         {images.map((img, i) => <ImageListItem key={i}>
                             <img src={img.imageLink} alt={img.altText}/>
                         </ImageListItem>)}
-                    </ImageList> }
+                    </ImageList>
                     <Stack direction="row">
                         { linkGithub ? <Link href={linkGithub}>Github</Link> : null }
                         { linkProject ? <Link href={linkProject}>View</Link> : null }
