@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Markdown from 'markdown-to-jsx';
-import content from "../../content/home.md";
+import content from "../content/home.md";
 
 const Home = () => {
     const [markdown, setMarkdown] = useState("");
