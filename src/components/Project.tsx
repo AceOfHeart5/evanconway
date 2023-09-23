@@ -7,16 +7,17 @@ interface ProjectProps {
     linkGithub?: string,
     linkProject?: string,
     images?: { imageLink: string, altText: string }[],
-    markdownFileName?: string,
+    markdownDescriptionPath?: string,
 }
 
-const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: ProjectProps) => {
+const Project = ({ title, linkGithub, linkProject, images, markdownDescriptionPath }: ProjectProps) => {
     const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
+        if (markdownDescriptionPath === undefined) return;
         const setupMarkdown = async () => {
             try {
-                const res = await import(`../content/projects/${markdownFileName}.md`);
+                const res = await import(markdownDescriptionPath);
                 const fetched = await fetch(res.default);
                 const text = await fetched.text();
                 setMarkdown(text);
@@ -25,7 +26,7 @@ const Project = ({ title, linkGithub, linkProject, images, markdownFileName }: P
             }
         };
         setupMarkdown();
-    }, [markdownFileName]);
+    }, [markdownDescriptionPath]);
 
     return (
         <Grid item xs={12} md={6} lg={4}>
