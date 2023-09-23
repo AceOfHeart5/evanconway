@@ -17,9 +17,8 @@ const Project = ({ title, linkGithub, linkProject, images=[], markdownDescriptio
         if (markdownDescriptionPath === undefined) return;
         const setupMarkdown = async () => {
             try {
-                const res = await import(markdownDescriptionPath);
-                const fetched = await fetch(res.default);
-                const text = await fetched.text();
+                const res = await fetch(markdownDescriptionPath);
+                const text = await res.text();
                 setMarkdown(text);
             } catch (e) {
                 console.log(`project markdown error: ${e}`);

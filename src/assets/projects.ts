@@ -27,9 +27,7 @@ interface Project {
     markdownDescriptionPath?: string,
 }
 
-const getProjectDescriptionPath = (markdownFileName: string) => {
-    return `/src/assets/project_descriptions/${markdownFileName}.md`;
-};
+const getProjectDescriptionPath = (markdownFileName: string) => `src/assets/project_descriptions/${markdownFileName}.md`;
 
 const PROJECTS: Project[] = [
     {
