@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Markdown from 'markdown-to-jsx';
 import { Grid, Card, CardContent, Typography, Stack, Link, ImageList, ImageListItem } from '@mui/material';
 
@@ -7,32 +6,16 @@ interface ProjectProps {
     linkGithub?: string,
     linkProject?: string,
     images?: { imageLink: string, altText: string }[],
-    markdownDescriptionPath?: string,
+    markdownDescription: string,
 }
 
-const Project = ({ title, linkGithub, linkProject, images=[], markdownDescriptionPath }: ProjectProps) => {
-    const [markdown, setMarkdown] = useState("");
-
-    useEffect(() => {
-        if (markdownDescriptionPath === undefined) return;
-        const setupMarkdown = async () => {
-            try {
-                const res = await fetch(markdownDescriptionPath);
-                const text = await res.text();
-                setMarkdown(text);
-            } catch (e) {
-                console.log(`project markdown error: ${e}`);
-            }
-        };
-        setupMarkdown();
-    }, [markdownDescriptionPath]);
-
+const Project = ({ title, linkGithub, linkProject, images=[], markdownDescription }: ProjectProps) => {
     return (
         <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%" }}>
                 <CardContent>
                     <Typography variant='h5'>{title}</Typography>
-                    <Markdown>{markdown}</Markdown>
+                    <Markdown>{markdownDescription}</Markdown>
                     <ImageList>
                         {images.map((img, i) => <ImageListItem key={i}>
                             <img src={img.imageLink} alt={img.altText}/>

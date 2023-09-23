@@ -11,7 +11,7 @@ const Projects = () => {
                 linkGithub={p.linkGithub}
                 linkProject={p.linkProject}
                 images={p.images}
-                markdownDescriptionPath={p.markdownDescriptionPath}
+                markdownDescription={p.markdownDescription}
             />) }
         </Grid>
     </Container>;

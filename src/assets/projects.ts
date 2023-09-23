@@ -24,10 +24,8 @@ interface Project {
     linkGithub?: string,
     linkProject?: string,
     images?: { imageLink: string, altText: string }[],
-    markdownDescriptionPath?: string,
+    markdownDescription: string,
 }
-
-const getProjectDescriptionPath = (markdownFileName: string) => `src/assets/project_descriptions/${markdownFileName}.md`;
 
 const PROJECTS: Project[] = [
     {
@@ -40,7 +38,7 @@ const PROJECTS: Project[] = [
             { imageLink: stairstep, altText: "Screen shot of bad pixel movement." },
             { imageLink: stairstepFixed, altText: "Screen shot of fixed pixel movement." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("pixelmove"),
+        markdownDescription: "A GameMaker package to quickly setup pixel perfect movement in low resolution games.",
     },
     {
         title: "Score Keeping Web App",
@@ -50,7 +48,7 @@ const PROJECTS: Project[] = [
             { imageLink: scoreApp01, altText: "Screen shot of score keeping app." },
             { imageLink: scoreApp02, altText: "Screen shot of options modal in score keeping app." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("scorekeeper"),
+        markdownDescription: "Scorekeeping app for tabletop games.",
     },
     {
         title: "Dialog Tree",
@@ -60,7 +58,7 @@ const PROJECTS: Project[] = [
             { imageLink: dialogSceneCode, altText: "dialog scene code" },
             { imageLink: dialogSceneExample, altText: "dialog scene example" },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("dialogtree"),
+        markdownDescription: "Dialog tree library for GameMaker.",
     },
     {
         title: "Guestbook",
@@ -69,7 +67,7 @@ const PROJECTS: Project[] = [
         images: [
             { imageLink: guestbookScreenshot, altText: "guestbook app" },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("guestbook"),
+        markdownDescription: "Prototype fullstack app using React, Express, and Postgres hosted on Digital Ocean.",
     },
     {
         title: "Text Boxes",
@@ -80,7 +78,7 @@ const PROJECTS: Project[] = [
             { imageLink: textcombine, altText: "Combined text effects with typing." },
             { imageLink: texttyping, altText: "Special typing effects." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("textboxes"),
+        markdownDescription: "Animated text library for GameMaker.",
     },
     {
         title: "Discord Bot",
@@ -90,7 +88,7 @@ const PROJECTS: Project[] = [
             { imageLink: botcommand, altText: "Programming a discord bot." },
             { imageLink: botdemonstrate, altText: "Bot performing its program." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("discordbot"),
+        markdownDescription: "Discord bot with programmable responses.",
     },
     {
         title: "Piano Sight-Reading Web App",
@@ -99,7 +97,7 @@ const PROJECTS: Project[] = [
         images: [
             { imageLink: sitereadingapp, altText: "Screen shot of piano sight-reading app." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("sightreading")
+        markdownDescription: "Sight-reading app for digital piano.",
     },
     {
         title: "GameMaker Studio Prototype",
@@ -108,7 +106,7 @@ const PROJECTS: Project[] = [
         images: [
             { imageLink: topDownAdventure, altText: "Top down adventure game prototype." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("topdown")
+        markdownDescription: "Topdown GameMaker prototype.",
     },
     {
         title: "GameMaker Studio Game",
@@ -118,12 +116,12 @@ const PROJECTS: Project[] = [
             { imageLink: eviltower01, altText: "Screenshot of GameMaker game." },
             { imageLink: eviltower02, altText: "Screenshot of GameMaker game." },
         ],
-        markdownDescriptionPath: getProjectDescriptionPath("eviltower"),
+        markdownDescription: "Feature complete GameMaker prototype.",
     },
     {
         title: "Music",
         linkProject: "https://www.universalproductionmusic.com/en-us/search?q=evan%20conway&qtext=evan%20conway&vtag=0&vwave=0&vdesc=1&ktype=6",
-        markdownDescriptionPath: getProjectDescriptionPath("music"),
+        markdownDescription: "Over 250 piese of music written for TV, radio, and various media. Some examples are [Beautiful Entanglement](http://links.universalproductionmusic.com/CnDcyu), [Nuts And Bolts](http://links.universalproductionmusic.com/nfgSlm), [Glorious Dawn](http://links.universalproductionmusic.com/T23gTi), and [Adorable Saves The Day](http://links.universalproductionmusic.com/sU9fpv)",
     }
 ];
 
