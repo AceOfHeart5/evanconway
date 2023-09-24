@@ -13,7 +13,7 @@ const Navbar = () => {
         <Button onClick={() => setPage("")}>Home</Button>
         <Button onClick={() => setPage("blog")}>Blog</Button>
         <Button onClick={() => setPage("projects")}>Projects</Button>
-        <IconButton color="primary" href="https://github.com/AceOfHeart5">
+        <IconButton color="primary" href="https://github.com/evanconway">
             <GitHub fontSize='large'/>
         </IconButton>
     </Stack>;

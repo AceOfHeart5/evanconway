@@ -30,7 +30,7 @@ interface Project {
 const PROJECTS: Project[] = [
     {
         title: "PixelMove",
-        linkGithub: "https://github.com/AceOfHeart5/pixelmove",
+        linkGithub: "https://github.com/evanconway/pixelmove",
         linkProject: "https://gla55world.itch.io/pixelmove-demo",
         images: [
             { imageLink: pixelmoveBad, altText: "Traced line of bad movement." },
@@ -42,8 +42,8 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Score Keeping Web App",
-        linkGithub: "https://github.com/AceOfHeart5/game-life-tracker",
-        linkProject: "https://aceofheart5.github.io/game-life-tracker/",
+        linkGithub: "https://github.com/evanconway/game-life-tracker",
+        linkProject: "https://evanconway.github.io/game-life-tracker/",
         images: [
             { imageLink: scoreApp01, altText: "Screen shot of score keeping app." },
             { imageLink: scoreApp02, altText: "Screen shot of options modal in score keeping app." },
@@ -52,7 +52,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Dialog Tree",
-        linkGithub: "https://github.com/AceOfHeart5/DialogScene",
+        linkGithub: "https://github.com/evanconway/DialogScene",
         linkProject: "https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0",
         images: [
             { imageLink: dialogSceneCode, altText: "dialog scene code" },
@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Guestbook",
-        linkGithub: "https://github.com/AceOfHeart5/guestbook-backend",
+        linkGithub: "https://github.com/evanconway/guestbook-backend",
         linkProject: "https://guestbook-l5nnz.ondigitalocean.app/",
         images: [
             { imageLink: guestbookScreenshot, altText: "guestbook app" },
@@ -71,7 +71,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Text Boxes",
-        linkGithub: "https://github.com/AceOfHeart5/Text_Boxes",
+        linkGithub: "https://github.com/evanconway/Text_Boxes",
         images: [
             { imageLink: textcode, altText: "Code for colored text." },
             { imageLink: textcolors, altText: "Colored text." },
@@ -82,7 +82,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Discord Bot",
-        linkGithub: "https://github.com/AceOfHeart5/Meme-Machine-discord-bot",
+        linkGithub: "https://github.com/evanconway/Meme-Machine-discord-bot",
         images: [
             { imageLink: uparrow, altText: "Up arrow reaction." },
             { imageLink: botcommand, altText: "Programming a discord bot." },
@@ -92,8 +92,8 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Piano Sight-Reading Web App",
-        linkGithub: "https://github.com/AceOfHeart5/piano-sight-reading",
-        linkProject: "https://aceofheart5.github.io/piano-sight-reading/",
+        linkGithub: "https://github.com/evanconway/piano-sight-reading",
+        linkProject: "https://evanconway.github.io/piano-sight-reading/",
         images: [
             { imageLink: sitereadingapp, altText: "Screen shot of piano sight-reading app." },
         ],
@@ -101,7 +101,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "GameMaker Studio Prototype",
-        linkGithub: "https://github.com/AceOfHeart5/TopDownAdventure/tree/2.3update",
+        linkGithub: "https://github.com/evanconway/TopDownAdventure/tree/2.3update",
         linkProject: "https://gla55world.itch.io/top-down-adventure",
         images: [
             { imageLink: topDownAdventure, altText: "Top down adventure game prototype." },
@@ -110,7 +110,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "GameMaker Studio Game",
-        linkGithub: "https://github.com/AceOfHeart5/evil-tower",
+        linkGithub: "https://github.com/evanconway/evil-tower",
         linkProject: "https://gla55world.itch.io/the-evil-tower",
         images: [
             { imageLink: eviltower01, altText: "Screenshot of GameMaker game." },
