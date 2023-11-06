@@ -8,7 +8,6 @@ import textcode from './project_images/textcode.png';
 import textcolors from './project_images/textcolors.gif';
 import textcombine from './project_images/textcombine.gif';
 import texttyping from './project_images/texttyping.gif';
-import guestbookScreenshot from './project_images/guestbook.png';
 import topDownAdventure from './project_images/topdownadventure.png';
 import dialogSceneCode from './project_images/DialogScene_Code.png';
 import dialogSceneExample from './project_images/DialogScene_Example.gif';
@@ -59,15 +58,6 @@ const PROJECTS: Project[] = [
             { imageLink: dialogSceneExample, altText: "dialog scene example" },
         ],
         markdownDescription: "Dialog tree library for GameMaker.",
-    },
-    {
-        title: "Guestbook",
-        linkGithub: "https://github.com/evanconway/guestbook-backend",
-        linkProject: "https://guestbook-l5nnz.ondigitalocean.app/",
-        images: [
-            { imageLink: guestbookScreenshot, altText: "guestbook app" },
-        ],
-        markdownDescription: "Prototype fullstack app using React, Express, and Postgres hosted on Digital Ocean.",
     },
     {
         title: "Text Boxes",
