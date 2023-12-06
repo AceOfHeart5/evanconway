@@ -111,7 +111,7 @@ const PROJECTS: Project[] = [
     {
         title: "Music",
         linkProject: "https://www.universalproductionmusic.com/en-us/search?q=evan%20conway&qtext=evan%20conway&vtag=0&vwave=0&vdesc=1&ktype=6",
-        markdownDescription: "Over 250 piese of music written for TV, radio, and various media. Some examples are [Beautiful Entanglement](http://links.universalproductionmusic.com/CnDcyu), [Nuts And Bolts](http://links.universalproductionmusic.com/nfgSlm), [Glorious Dawn](http://links.universalproductionmusic.com/T23gTi), and [Adorable Saves The Day](http://links.universalproductionmusic.com/sU9fpv)",
+        markdownDescription: "Over 250 pieces of music written for TV, radio, and various media. Some examples are [Beautiful Entanglement](http://links.universalproductionmusic.com/CnDcyu), [Nuts And Bolts](http://links.universalproductionmusic.com/nfgSlm), [Glorious Dawn](http://links.universalproductionmusic.com/T23gTi), and [Adorable Saves The Day](http://links.universalproductionmusic.com/sU9fpv)",
     }
 ];
 
