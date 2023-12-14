@@ -17,6 +17,8 @@ import pixelmoveGood from './project_images/Pixel Move Good.png';
 import pixelmoveBad from './project_images/Pixel Move Bad.png';
 import stairstep from './project_images/pixelmove_stairsteps.gif';
 import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
+import millie1 from './project_images/MillieTitlePage.png';
+import millie2 from './project_images/MillieShot1.png';
 
 interface Project {
     title: string,
@@ -27,6 +29,22 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+    {
+        title: "Tea Time With Millie",
+        linkProject: "https://gla55world.itch.io/tea-time-with-millie",
+        images: [
+            { imageLink: millie1, altText: 'Millie the pill bug.' },
+            { imageLink: millie2, altText: 'Millie in a living room ready to make tea.' },
+        ],
+        markdownDescription: "A small point and click adventure made in collaboration with an illustrator."
+    },
+    {
+        title: "The Weight of Words",
+        linkGithub: "https://github.com/evanconway/gamemaker-web-experiment",
+        linkProject: "https://gla55world.itch.io/the-weight-of-words",
+        images: [],
+        markdownDescription: "Online multiplayer type racing game. Frontend made in GameMaker backend made with NodeJs."
+    },
     {
         title: "PixelMove",
         linkGithub: "https://github.com/evanconway/pixelmove",
@@ -88,25 +106,6 @@ const PROJECTS: Project[] = [
             { imageLink: sitereadingapp, altText: "Screen shot of piano sight-reading app." },
         ],
         markdownDescription: "Sight-reading app for digital piano.",
-    },
-    {
-        title: "GameMaker Studio Prototype",
-        linkGithub: "https://github.com/evanconway/TopDownAdventure/tree/2.3update",
-        linkProject: "https://gla55world.itch.io/top-down-adventure",
-        images: [
-            { imageLink: topDownAdventure, altText: "Top down adventure game prototype." },
-        ],
-        markdownDescription: "Topdown GameMaker prototype.",
-    },
-    {
-        title: "GameMaker Studio Game",
-        linkGithub: "https://github.com/evanconway/evil-tower",
-        linkProject: "https://gla55world.itch.io/the-evil-tower",
-        images: [
-            { imageLink: eviltower01, altText: "Screenshot of GameMaker game." },
-            { imageLink: eviltower02, altText: "Screenshot of GameMaker game." },
-        ],
-        markdownDescription: "Feature complete GameMaker prototype.",
     },
     {
         title: "Music",
