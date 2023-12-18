@@ -1,5 +1,5 @@
-import eviltower01 from './project_images/eviltower01.png';
-import eviltower02 from './project_images/eviltower02.png';
+// import eviltower01 from './project_images/eviltower01.png';
+// import eviltower02 from './project_images/eviltower02.png';
 import botcommand from './project_images/botcommand.gif';
 import botdemonstrate from './project_images/botdemonstrate.gif';
 import uparrow from './project_images/uparrow.gif';
@@ -8,7 +8,7 @@ import textcode from './project_images/textcode.png';
 import textcolors from './project_images/textcolors.gif';
 import textcombine from './project_images/textcombine.gif';
 import texttyping from './project_images/texttyping.gif';
-import topDownAdventure from './project_images/topdownadventure.png';
+// import topDownAdventure from './project_images/topdownadventure.png';
 import dialogSceneCode from './project_images/DialogScene_Code.png';
 import dialogSceneExample from './project_images/DialogScene_Example.gif';
 import scoreApp01 from './project_images/scoreapp01.png';
@@ -19,6 +19,9 @@ import stairstep from './project_images/pixelmove_stairsteps.gif';
 import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
 import millie1 from './project_images/MillieTitlePage.png';
 import millie2 from './project_images/MillieShot1.png';
+import typingTitle from './project_images/TypingTitle.png';
+import typingPlay1 from './project_images/typingplay1.png';
+import typingPlay2 from './project_images/typingplay2.png';
 
 interface Project {
     title: string,
@@ -42,7 +45,11 @@ const PROJECTS: Project[] = [
         title: "The Weight of Words",
         linkGithub: "https://github.com/evanconway/gamemaker-web-experiment",
         linkProject: "https://gla55world.itch.io/the-weight-of-words",
-        images: [],
+        images: [
+            { imageLink: typingPlay1, altText: "Searching for game." },
+            { imageLink: typingPlay2, altText: "Results screen." },
+            { imageLink: typingTitle, altText: "Title screen." },
+        ],
         markdownDescription: "Online multiplayer type racing game. Frontend made in GameMaker backend made with NodeJs."
     },
     {
