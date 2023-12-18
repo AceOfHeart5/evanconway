@@ -19,7 +19,7 @@ import stairstep from './project_images/pixelmove_stairsteps.gif';
 import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
 import millie1 from './project_images/MillieTitlePage.png';
 import millie2 from './project_images/MillieShot1.png';
-import typingTitle from './project_images/TypingTitle.png';
+import typingTitle from './project_images/typingtitle.png';
 import typingPlay1 from './project_images/typingplay1.png';
 import typingPlay2 from './project_images/typingplay2.png';
 import rcgame1 from './project_images/rcgame1.png';
