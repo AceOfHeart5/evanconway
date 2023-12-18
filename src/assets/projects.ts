@@ -22,6 +22,9 @@ import millie2 from './project_images/MillieShot1.png';
 import typingTitle from './project_images/TypingTitle.png';
 import typingPlay1 from './project_images/typingplay1.png';
 import typingPlay2 from './project_images/typingplay2.png';
+import rcgame1 from './project_images/rcgame1.png';
+import rcgame2 from './project_images/rcgame2.png';
+import rcgame3 from './project_images/rcgame3.png';
 
 interface Project {
     title: string,
@@ -51,6 +54,17 @@ const PROJECTS: Project[] = [
             { imageLink: typingTitle, altText: "Title screen." },
         ],
         markdownDescription: "Online multiplayer type racing game. Frontend made in GameMaker backend made with NodeJs."
+    },
+    {
+        title: "RC Halloween Hackathon",
+        linkGithub: "https://github.com/evanconway/rc-halloween-hackathon",
+        linkProject: "https://gx.games/games/b9lass/rc-halloween-hackathon/",
+        images: [
+            { imageLink: rcgame1, altText: "Gameplay of RC game."},
+            { imageLink: rcgame2, altText: "Gameplay of RC game."},
+            { imageLink: rcgame3, altText: "Gameplay of RC game."},
+        ],
+        markdownDescription: "Mockup of the Recurse Center made during 7 day Halloween Hackathon."
     },
     {
         title: "PixelMove",

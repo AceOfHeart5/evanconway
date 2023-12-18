@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return <Stack direction="row" alignItems={"center"}>
         <Button onClick={() => setPage("")}>Home</Button>
-        <Button onClick={() => setPage("blog")}>Blog</Button>
+        {/* <Button onClick={() => setPage("blog")}>Blog</Button> */}
         <Button onClick={() => setPage("projects")}>Projects</Button>
         <IconButton color="primary" href="https://github.com/evanconway">
             <GitHub fontSize='large'/>
