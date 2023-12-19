@@ -90,7 +90,7 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Dialog Tree",
-        linkGithub: "https://github.com/evanconway/DialogScene",
+        linkGithub: "https://github.com/evanconway/dialog",
         linkProject: "https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0",
         images: [
             { imageLink: dialogSceneCode, altText: "dialog scene code" },
