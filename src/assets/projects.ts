@@ -99,8 +99,8 @@ const PROJECTS: Project[] = [
         markdownDescription: "Dialog tree library for GameMaker.",
     },
     {
-        title: "Text Boxes",
-        linkGithub: "https://github.com/evanconway/Text_Boxes",
+        title: "Tag Decorated Text",
+        linkGithub: "https://github.com/evanconway/tagdecoratedtext/tree/main",
         images: [
             { imageLink: textcode, altText: "Code for colored text." },
             { imageLink: textcolors, altText: "Colored text." },
