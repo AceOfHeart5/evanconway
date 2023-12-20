@@ -79,6 +79,17 @@ const PROJECTS: Project[] = [
         markdownDescription: "A GameMaker package to quickly setup pixel perfect movement in low resolution games.",
     },
     {
+        title: "Tag Decorated Text",
+        linkGithub: "https://github.com/evanconway/tagdecoratedtext/tree/main",
+        images: [
+            { imageLink: textcode, altText: "Code for colored text." },
+            { imageLink: textcolors, altText: "Colored text." },
+            { imageLink: textcombine, altText: "Combined text effects with typing." },
+            { imageLink: texttyping, altText: "Special typing effects." },
+        ],
+        markdownDescription: "Animated text library for GameMaker.",
+    },
+    {
         title: "Score Keeping Web App",
         linkGithub: "https://github.com/evanconway/game-life-tracker",
         linkProject: "https://evanconway.github.io/game-life-tracker/",
@@ -97,17 +108,6 @@ const PROJECTS: Project[] = [
             { imageLink: dialogSceneExample, altText: "dialog scene example" },
         ],
         markdownDescription: "Dialog tree library for GameMaker.",
-    },
-    {
-        title: "Tag Decorated Text",
-        linkGithub: "https://github.com/evanconway/tagdecoratedtext/tree/main",
-        images: [
-            { imageLink: textcode, altText: "Code for colored text." },
-            { imageLink: textcolors, altText: "Colored text." },
-            { imageLink: textcombine, altText: "Combined text effects with typing." },
-            { imageLink: texttyping, altText: "Special typing effects." },
-        ],
-        markdownDescription: "Animated text library for GameMaker.",
     },
     {
         title: "Discord Bot",
