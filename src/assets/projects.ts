@@ -17,6 +17,9 @@ import pixelmoveGood from './project_images/Pixel Move Good.png';
 import pixelmoveBad from './project_images/Pixel Move Bad.png';
 import stairstep from './project_images/pixelmove_stairsteps.gif';
 import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
+import montyHall1 from './project_images/montyhall1.png';
+import montyHall2 from './project_images/montyhall2.png';
+import montyHall3 from './project_images/montyhall3.png';
 
 interface Project {
     title: string,
@@ -27,6 +30,17 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+    {
+        title: "The Monty Hall Problem",
+        linkGithub: "https://github.com/evanconway/monty-hall-problem",
+        linkProject: "https://evanconway.github.io/monty-hall-problem",
+        images: [
+            { imageLink: montyHall1, altText: "3 door game." },
+            { imageLink: montyHall2, altText: "Auto player section." },
+            { imageLink: montyHall3, altText: "Example output of 1000 games." },
+        ],
+        markdownDescription: "A small interactive website that illustrates the Monty Hall Problem."
+    },
     {
         title: "PixelMove",
         linkGithub: "https://github.com/evanconway/pixelmove",
