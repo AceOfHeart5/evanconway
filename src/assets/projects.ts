@@ -1,5 +1,5 @@
-import eviltower01 from './project_images/eviltower01.png';
-import eviltower02 from './project_images/eviltower02.png';
+// import eviltower01 from './project_images/eviltower01.png';
+// import eviltower02 from './project_images/eviltower02.png';
 import botcommand from './project_images/botcommand.gif';
 import botdemonstrate from './project_images/botdemonstrate.gif';
 import uparrow from './project_images/uparrow.gif';
@@ -8,7 +8,7 @@ import textcode from './project_images/textcode.png';
 import textcolors from './project_images/textcolors.gif';
 import textcombine from './project_images/textcombine.gif';
 import texttyping from './project_images/texttyping.gif';
-import topDownAdventure from './project_images/topdownadventure.png';
+// import topDownAdventure from './project_images/topdownadventure.png';
 import dialogSceneCode from './project_images/DialogScene_Code.png';
 import dialogSceneExample from './project_images/DialogScene_Example.gif';
 import scoreApp01 from './project_images/scoreapp01.png';
@@ -20,6 +20,14 @@ import stairstepFixed from './project_images/pixelmove_fixed_movement.gif';
 import montyHall1 from './project_images/montyhall1.png';
 import montyHall2 from './project_images/montyhall2.png';
 import montyHall3 from './project_images/montyhall3.png';
+import millie1 from './project_images/MillieTitlePage.png';
+import millie2 from './project_images/MillieShot1.png';
+import typingTitle from './project_images/typingtitle.png';
+import typingPlay1 from './project_images/typingplay1.png';
+import typingPlay2 from './project_images/typingplay2.png';
+import rcgame1 from './project_images/rcgame1.png';
+import rcgame2 from './project_images/rcgame2.png';
+import rcgame3 from './project_images/rcgame3.png';
 
 interface Project {
     title: string,
@@ -42,6 +50,37 @@ const PROJECTS: Project[] = [
         markdownDescription: "A small interactive website that illustrates the Monty Hall Problem."
     },
     {
+        title: "Tea Time With Millie",
+        linkProject: "https://gla55world.itch.io/tea-time-with-millie",
+        images: [
+            { imageLink: millie1, altText: 'Millie the pill bug.' },
+            { imageLink: millie2, altText: 'Millie in a living room ready to make tea.' },
+        ],
+        markdownDescription: "A small point and click adventure made in collaboration with an illustrator."
+    },
+    {
+        title: "The Weight of Words",
+        linkGithub: "https://github.com/evanconway/gamemaker-web-experiment",
+        linkProject: "https://gla55world.itch.io/the-weight-of-words",
+        images: [
+            { imageLink: typingPlay1, altText: "Searching for game." },
+            { imageLink: typingPlay2, altText: "Results screen." },
+            { imageLink: typingTitle, altText: "Title screen." },
+        ],
+        markdownDescription: "Online multiplayer type racing game. Frontend made in GameMaker backend made with NodeJs."
+    },
+    {
+        title: "RC Halloween Hackathon",
+        linkGithub: "https://github.com/evanconway/rc-halloween-hackathon",
+        linkProject: "https://gx.games/games/b9lass/rc-halloween-hackathon/",
+        images: [
+            { imageLink: rcgame1, altText: "Gameplay of RC game."},
+            { imageLink: rcgame2, altText: "Gameplay of RC game."},
+            { imageLink: rcgame3, altText: "Gameplay of RC game."},
+        ],
+        markdownDescription: "Mockup of the Recurse Center made during 7 day Halloween Hackathon."
+    },
+    {
         title: "PixelMove",
         linkGithub: "https://github.com/evanconway/pixelmove",
         linkProject: "https://gla55world.itch.io/pixelmove-demo",
@@ -52,6 +91,17 @@ const PROJECTS: Project[] = [
             { imageLink: stairstepFixed, altText: "Screen shot of fixed pixel movement." },
         ],
         markdownDescription: "A GameMaker package to quickly setup pixel perfect movement in low resolution games.",
+    },
+    {
+        title: "Tag Decorated Text",
+        linkGithub: "https://github.com/evanconway/tagdecoratedtext/tree/main",
+        images: [
+            { imageLink: textcode, altText: "Code for colored text." },
+            { imageLink: textcolors, altText: "Colored text." },
+            { imageLink: textcombine, altText: "Combined text effects with typing." },
+            { imageLink: texttyping, altText: "Special typing effects." },
+        ],
+        markdownDescription: "Animated text library for GameMaker.",
     },
     {
         title: "Score Keeping Web App",
@@ -65,24 +115,13 @@ const PROJECTS: Project[] = [
     },
     {
         title: "Dialog Tree",
-        linkGithub: "https://github.com/evanconway/DialogScene",
+        linkGithub: "https://github.com/evanconway/dialog",
         linkProject: "https://gla55world.itch.io/dialog-scene-test?secret=FWyPf45aSyQESRo9k7sMDmlhaM0",
         images: [
             { imageLink: dialogSceneCode, altText: "dialog scene code" },
             { imageLink: dialogSceneExample, altText: "dialog scene example" },
         ],
         markdownDescription: "Dialog tree library for GameMaker.",
-    },
-    {
-        title: "Text Boxes",
-        linkGithub: "https://github.com/evanconway/Text_Boxes",
-        images: [
-            { imageLink: textcode, altText: "Code for colored text." },
-            { imageLink: textcolors, altText: "Colored text." },
-            { imageLink: textcombine, altText: "Combined text effects with typing." },
-            { imageLink: texttyping, altText: "Special typing effects." },
-        ],
-        markdownDescription: "Animated text library for GameMaker.",
     },
     {
         title: "Discord Bot",
@@ -102,25 +141,6 @@ const PROJECTS: Project[] = [
             { imageLink: sitereadingapp, altText: "Screen shot of piano sight-reading app." },
         ],
         markdownDescription: "Sight-reading app for digital piano.",
-    },
-    {
-        title: "GameMaker Studio Prototype",
-        linkGithub: "https://github.com/evanconway/TopDownAdventure/tree/2.3update",
-        linkProject: "https://gla55world.itch.io/top-down-adventure",
-        images: [
-            { imageLink: topDownAdventure, altText: "Top down adventure game prototype." },
-        ],
-        markdownDescription: "Topdown GameMaker prototype.",
-    },
-    {
-        title: "GameMaker Studio Game",
-        linkGithub: "https://github.com/evanconway/evil-tower",
-        linkProject: "https://gla55world.itch.io/the-evil-tower",
-        images: [
-            { imageLink: eviltower01, altText: "Screenshot of GameMaker game." },
-            { imageLink: eviltower02, altText: "Screenshot of GameMaker game." },
-        ],
-        markdownDescription: "Feature complete GameMaker prototype.",
     },
     {
         title: "Music",
