@@ -1,8 +1,8 @@
 interface BlogPost {
-    title: string,
-    date: Date,
-    description: string,
-    contentPath: string,
+  title: string;
+  date: Date;
+  description: string;
+  contentPath: string;
 }
 
 // const getContentPath = (fileName: string) => `/src/assets/blog_posts/${fileName}.md`;

@@ -2,17 +2,23 @@ import JsxMarkdown from "markdown-to-jsx";
 import { Link } from "@mui/material";
 
 interface Props {
-    children: string,
+  children: string;
 }
 
 const Markdown = ({ children }: Props) => {
-    return <JsxMarkdown options={{
+  return (
+    <JsxMarkdown
+      options={{
         overrides: {
-            a: {
-                component: Link,
-            },
+          a: {
+            component: Link,
+          },
         },
-    }}>{children}</JsxMarkdown>
+      }}
+    >
+      {children}
+    </JsxMarkdown>
+  );
 };
 
 export default Markdown;
