@@ -5,6 +5,7 @@ import App from "./App";
 import MarkdownPage from "./components/MarkdownPage";
 import homeContent from "./assets/home.md";
 import Projects from "./components/Projects";
+import Blog from "./components/Blog";
 
 const html = Array.from(document.getElementsByTagName("html")!)[0];
 html.style.overflowY = "scroll";
@@ -24,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             },
             {
               path: "/blog",
-              element: <div>lol there are no blogs here</div>,
+              element: <Blog />,
             },
             {
               path: "/projects",
