@@ -10,9 +10,15 @@ const getContentPath = (fileName: string) =>
 
 const BLOG: BlogPost[] = [
   {
+    title: "Multi Image!",
+    date: new Date(20204, 4, 30),
+    description: "Creating meta open graph tags with multiple images.",
+    contentPath: getContentPath("MultiImageOG"),
+  },
+  {
     title: "Cool Blog Post",
     date: new Date(2023, 9, 23),
-    description: "Cool stuff from a cool person",
+    description: "Cool stuff from a cool person.",
     contentPath: getContentPath("CoolBlogPost"),
   },
   {

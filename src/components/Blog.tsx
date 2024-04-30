@@ -39,11 +39,7 @@ const BlogList = () => {
   );
 };
 
-interface PostProps {
-  postId: string;
-}
-
-const Post = ({ postId }: PostProps) => {
+const Post = ({ postId }: { postId: string }) => {
   const navigate = useNavigate();
 
   const post = BLOG.find((p) => String(p.date.getTime()) === postId);
