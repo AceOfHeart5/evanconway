@@ -18,8 +18,8 @@ const BlogList = () => {
 
   return (
     <Stack>
-      {BLOG.map((post) => (
-        <Card>
+      {BLOG.map((post, i) => (
+        <Card key={i}>
           <CardActionArea
             onClick={() =>
               setSearchParams({ postid: String(post.date.getTime()) })
@@ -52,7 +52,7 @@ const Post = ({ postId }: PostProps) => {
 
   return (
     <>
-      <Button onClick={() => navigate("blog", { replace: true })}>
+      <Button onClick={() => navigate("/blog", { replace: true })}>
         {"< Back"}
       </Button>
       <MarkdownPage contentPath={post.contentPath} />
