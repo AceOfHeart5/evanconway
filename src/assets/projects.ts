@@ -28,6 +28,9 @@ import typingPlay2 from './project_images/typingplay2.png';
 import rcgame1 from './project_images/rcgame1.png';
 import rcgame2 from './project_images/rcgame2.png';
 import rcgame3 from './project_images/rcgame3.png';
+import gamesHeadToHead1 from './project_images/gamesheadtohead1.jpg';
+import gamesHeadToHead2 from './project_images/gamesheadtohead2.png';
+import gamesHeadToHead3 from './project_images/gamesheadtohead3.png';
 
 interface Project {
     title: string,
@@ -38,6 +41,17 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+    {
+        title: "Games Head-To-Head",
+        linkGithub: "https://github.com/evanconway/game-rank-battles",
+        linkProject: "https://gamesheadtohead.com",
+        images: [
+            { imageLink: gamesHeadToHead1, altText: "Game battle page." },
+            { imageLink: gamesHeadToHead2, altText: "Game rankings page." },
+            { imageLink: gamesHeadToHead3, altText: "Website title." },
+        ],
+        markdownDescription: "A website where users can pick their favorite games in 1 vs 1 battles."
+    },
     {
         title: "The Monty Hall Problem",
         linkGithub: "https://github.com/evanconway/monty-hall-problem",
