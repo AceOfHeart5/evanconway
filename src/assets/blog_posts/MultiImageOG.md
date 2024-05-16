@@ -1,5 +1,7 @@
 # Multiple images in an open graph meta tag
 
+## How we started.
+
 A while ago I made this website: [gamesheadtohead.com](https://gamesheadtohead.com). It gives you 2 games and you get to pick your favorite between them. While building the features I ran into some pretty fun combinations, like [Lego Racers](https://www.igdb.com/games/lego-racers) vs [Oblivion](https://www.igdb.com/games/the-elder-scrolls-iv-oblivion). And I'd share these combos with my friends by taking a screen shot and posting it to discord.
 
 <img src="src/assets/blog_assets/legoracers-vs-oblivion.jpg" alt="lego racers vs oblivion" width="400"/>
@@ -30,4 +32,64 @@ This is what I wanted. Users should be able to just post a link to see images. N
 
 According to its <a href="https://ogp.me/">official webpage</a>: "The Open Graph protocol enables any web page to become a rich object in a social graph."
 
-This is the technology that allows links to "look good" on various sites and in different applications.
+This is the technology that allows links to "look good" on various sites and in different applications. But how does it work? The key is in the html file served from the link. It contains meta tags using special open graph properties that define what the link looks like.
+
+```html
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <title>The Rock (1996)</title>
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta
+      property="og:image"
+      content="https://ia.media-imdb.com/images/rock.jpg"
+    />
+    ...
+  </head>
+  ...
+</html>
+```
+
+And in that example above we can see the image property. Exactly what I need! But there's just one problem: I need to display 2 images not just 1. I did some googling and asked some friends about this. Unfortunately the open graph protocol does not support multiple images. So what do we do?
+
+## Dynamic Image Generation
+
+The solution was to create an api endpoint that dynamically generates an image file of 2 games stitched together. To do this I used the <a href="https://www.npmjs.com/package/canvas">canvas npm package</a>. It's fairly straight forward to add 2 images to a canvas element in html. But since this is happening on the server I had to use this node package which implements the canvas element outside of a browser context. I'll admit I was worried this was going to be a duanting task, but it was fairly easy to do once I understood the basic concepts. And the function only ended up being a little over 20 lines of code:
+
+```typescript
+import { createCanvas, loadImage } from "canvas";
+import { writeFileSync, mkdirSync, existsSync } from "fs";
+import path from "path";
+
+export const generateMergedImage = async (
+  coverAUrl: string,
+  coverBUrl: string,
+) => {
+  const imageA = await loadImage(coverAUrl);
+  const imageB = await loadImage(coverBUrl);
+  const imageCanvas = createCanvas(
+    imageA.naturalWidth + imageB.naturalWidth,
+    Math.max(imageA.naturalHeight, imageB.naturalHeight),
+  );
+  const context = imageCanvas.getContext("2d");
+
+  context.drawImage(imageA, 0, 0);
+  context.drawImage(imageB, imageA.naturalWidth, 0);
+
+  const tempDir = path.join(__dirname, "../temp");
+  if (!existsSync(tempDir)) mkdirSync(tempDir);
+  const filePath = path.join(tempDir, "temp.png");
+  writeFileSync(filePath, imageCanvas.toBuffer("image/png"));
+  return filePath;
+};
+```
+
+With that function complete, it was simple to create an endpoint that, given 2 game Ids, could invoke the function and return a finished image of 2 game cover arts stitched together.
+
+<a href="https://gamesheadtohead.com/app/image?a=1037&b=1979">https://gamesheadtohead.com/app/image?a=1037&b=1979</a>
+![zelda vs battlefield](https://gamesheadtohead.com/app/image?a=1037&b=1979)
+
+## Injecting the meta tags
+
+But we're not quite done yet! Just because we have the endpoint doesn't mean this image will automatically show up when sharing a link. The actual line of code that makes links appear as images is that magical meta tag with the `og:image` property. This needs to be in the html file served from the share battle link.
