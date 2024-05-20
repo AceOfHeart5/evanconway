@@ -92,4 +92,45 @@ With that function complete, it was simple to create an endpoint that, given 2 g
 
 ## Injecting the meta tags
 
-But we're not quite done yet! Just because we have the endpoint doesn't mean this image will automatically show up when sharing a link. The actual line of code that makes links appear as images is that magical meta tag with the `og:image` property. This needs to be in the html file served from the share battle link.
+But we're not quite done yet! Just because we have the endpoint doesn't mean this image will automatically show up when sharing a link. The actual line of code that makes links appear as images is that magical meta tag with the `og:image` property. This needs to be in the html file served from the share battle link. This game battle webpag is a react app, which means it's serving the exact same html file for every page request. So how can be make sure that links to specific game comparisons have the correct meta tag. To be honest, I was impatient and didn't research exactly what you're "supposed" to do because I realized it would be pretty easy to just add the meta tag to the html with a good old fashioned String.replace() call.
+
+The server endpoint that serves static files runs a quick check to see if the url is `/share`. It then grabs the ids of the games be compared from query params in the url. And from that it can generate the url to fetch the stiched image. The html file served contains a string `<!--inject-here-->`. Before serving the html string we simply replace that with the meta tags. Here's the function I wrote to do that:
+
+```Typescript
+export const getMetaTags = (
+  url: URL,
+  description: string = "Rank your favorite games in 1 vs 1 battles.",
+  imageUrl?: string,
+) => {
+  if (imageUrl === undefined) {
+    imageUrl = `${url.origin}/app/title`;
+  }
+
+  return `
+		<!-- HTML Meta Tags -->
+		<title>Games Head-To-Head</title>
+		<meta name="description" content="${description}">
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:url" content="${url.origin}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Games Head-To-Head">
+		<meta property="og:description" content="${description}">
+		<meta property="og:image" content="${imageUrl}">
+		<meta property="og:image:width"" content="528">
+		<meta property="og:image:height"" content="352">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="${url.host}">
+		<meta property="twitter:url" content="${url.origin}">
+		<meta name="twitter:title" content="Games Head-To-Head">
+		<meta name="twitter:description" content="${description}">
+		<meta name="twitter:image" content="${imageUrl}">
+
+		<!-- Meta Tags Generated via https://opengraph.dev -->
+  `;
+};
+```
+
+The default values for `description` and `imageurl` are used for any page that isn't a `/share` page.
